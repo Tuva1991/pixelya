@@ -219,7 +219,7 @@
         </div>
     </div>
     <?php
-$counter_file = 'count.txt';
+$counter_file = 'https://lit-fortress-24137.herokuapp.com/count.txt';
 $counter_lenght = 8;
 $fp = fopen($counter_file, 'r+');
 if ($fp) {
