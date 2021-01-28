@@ -221,7 +221,7 @@
     <?php
     $hoge = 'phptest';
 
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", "r");
+    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
     fwrite($fp, "ファイルへの書き込みサンプル");
     fclose($fp);
     ?>
