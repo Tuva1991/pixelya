@@ -221,13 +221,16 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $hoge = __FILE__;
+    $hoge2 = dirname(__FILE__);
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
     fwrite($fp,"ファイルへの書き込みサンプル");
     fclose($fp);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($hoge); ?>;
+        var test2 = <?php echo json_encode($hoge2); ?>;
         console.log(test)
+        console.log(test2)
     </script>
 </body>
 </html>
