@@ -223,7 +223,7 @@
     echo __FILE__;
     $hoge = __FILE__;
     $hoge2 = dirname(__FILE__);
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
+    $fp = fopen("app/counter-japan-flag.txt","w+");
     fwrite($fp,"ファイルへの書き込みサンプル");
     fclose($fp);
     ?>
