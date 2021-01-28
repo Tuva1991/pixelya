@@ -220,7 +220,7 @@
     </div>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","a");
+    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     // fwrite($fp,"ファイルへの書き込みサンプル");
     // fclose($fp);
     ?>
