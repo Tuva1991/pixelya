@@ -225,7 +225,7 @@
     // fclose($fp);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($hoge); ?>;
+        var test = <?php echo json_encode($fp); ?>;
         console.log(test)
     </script>
 </body>
