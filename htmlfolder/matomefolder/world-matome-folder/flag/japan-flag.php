@@ -218,6 +218,7 @@
             </ul>
         </div>
     </div>
+    <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $hoge = 'phptest';
 
@@ -229,6 +230,5 @@
     var hoge = <?php echo json_encode($hoge); ?>;
     console.log(hoge);
     </script>
-    <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
 </html>
