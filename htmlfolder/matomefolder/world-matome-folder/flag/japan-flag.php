@@ -223,7 +223,7 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $calc = fgets($fp);
-    fclose($fp);
+//    fclose($fp);
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
