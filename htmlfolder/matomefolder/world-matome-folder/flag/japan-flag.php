@@ -222,13 +222,13 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $txt = fgets($fp);
-    // fwrite($fp,"ファイルへの書き込みサンプル");
-    // fclose($fp);
+    $calc = $fp + 1;
+    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","+w");
+    fwrite($fp,$clac);
+    fclose($fp);
     ?>
     <script type="text/javascript">
-        let test = <?php echo json_encode($txt); ?>
-        console.log(test)
-        console.log("testさん")
+        let test = <?php echo json_encode($text); ?>
     </script>
 </body>
 </html>
