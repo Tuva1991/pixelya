@@ -232,6 +232,7 @@
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($calc); ?>
+        var test2 = <?php echo json_encode($fp); ?>
     </script>
 </body>
 </html>
