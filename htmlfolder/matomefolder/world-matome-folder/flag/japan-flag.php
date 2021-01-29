@@ -222,7 +222,7 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $calc = fgets($fp + 1);
-    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","+w");
+    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
     fwrite($fp1,$clac);
     fclose($fp1);
     fclose($fp2);
