@@ -227,7 +227,7 @@
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
-    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
+    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","wb");
     //fwrite($fp1, $calc);
     //fclose($fp1);
     ?>
