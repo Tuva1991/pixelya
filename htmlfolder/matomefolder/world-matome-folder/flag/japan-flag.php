@@ -223,7 +223,7 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $calc = fgets($fp);
-    $fp = fclose($fp);
+    $hoge = fclose($fp);
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
@@ -233,7 +233,8 @@
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($calc); ?>
-            test2 = <?php echo json_encode($fp); ?>
+            test1 = <?php echo json_encode($fp); ?>
+            hoge = <?php echo json_encode($hoge); ?>
     </script>
 </body>
 </html>
