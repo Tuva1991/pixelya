@@ -226,10 +226,10 @@
     $clac = fgets($fp);
     var_dump((int)$clac);
     $calc = $clac + 1;
-    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
-    fwrite($fp1,$clac);
-    fclose($fp);
-    fclose($fp1);
+    //$fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
+    //fwrite($fp1,$clac);
+    //fclose($fp);
+    //fclose($fp1);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($clac); ?>
