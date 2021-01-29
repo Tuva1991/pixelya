@@ -43,7 +43,6 @@
                 例
                 <p style=" font-size: 22px; text-align: right; width: 240px; right: 10px; position: relative;">「国旗のドット絵」X<br>国旗」○</p>
                 </p>
-                <p id="result" style=" font-size: 22px; text-align: right; width: 240px; right: 10px; position: relative;"></p>
                 </p>
             </div>
         </div>
@@ -226,14 +225,13 @@
     $clac = fgets($fp);
     var_dump((int)$clac);
     $calc = $clac + 1;
-    //$fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
-    //fwrite($fp1,$clac);
-    //fclose($fp);
-    //fclose($fp1);
+    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
+    fwrite($fp1,$clac);
+    fclose($fp);
+    fclose($fp1);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($clac); ?>
-        var result = document.getElementById("result")
         console.log(test)
         console.log("testさん")
         result.innerHTML = test
