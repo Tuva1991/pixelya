@@ -233,7 +233,8 @@
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($calc); ?>
-            test2 = <?php echo json_encode($fp1); ?>
+            test2 = <?php echo json_encode($fp); ?>
+            test3 = <?php echo json_encode($fp1); ?>
     </script>
 </body>
 </html>
