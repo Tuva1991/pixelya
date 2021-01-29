@@ -230,6 +230,7 @@
     <script type="text/javascript">
         var test = <?php echo json_encode($fp); ?>;
         console.log(test);
+        console.log("testさん")
     </script>
 </body>
 </html>
