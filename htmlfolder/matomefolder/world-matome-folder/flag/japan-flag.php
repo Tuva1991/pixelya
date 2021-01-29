@@ -228,8 +228,8 @@
     fclose($fp2);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($fp); ?>
-        console.log(test)
+        var test = <?php echo json_encode($fp); ?>;
+        console.log(test);
     </script>
 </body>
 </html>
