@@ -223,7 +223,8 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
-    // $calc = $fp + 1;
+    $clac = fgets($fp);
+    $calc = $clac + 1;
     // $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
     // fwrite($fp1,$clac);
     // fclose($fp);
@@ -231,7 +232,7 @@
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($fp); ?>
-        // var result = document.getElementById("result");
+        // var result = document.getElementById("result")
         // console.log(test)
         console.log("testさん")
         result.innerHTML = test
