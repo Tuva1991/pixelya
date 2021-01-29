@@ -226,7 +226,7 @@
     // fclose($fp);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($txt); ?>
+        let test = <?php echo json_encode($txt); ?>
         console.log(test)
     </script>
 </body>
