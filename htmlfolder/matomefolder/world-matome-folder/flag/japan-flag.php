@@ -231,7 +231,7 @@
     // fclose($fp1);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($fp); ?>
+        var test = <?php echo json_encode($clac); ?>
         // var result = document.getElementById("result")
         // console.log(test)
         console.log("testさん")
