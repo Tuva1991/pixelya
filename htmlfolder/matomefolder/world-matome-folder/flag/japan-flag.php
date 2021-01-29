@@ -223,7 +223,7 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $clac = fgets($fp);
-    var_dump((int)$clac);
+    $clac = (int) $clac;
     $calc = $clac + 1;
     //$fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
     //fwrite($fp1,$clac);
