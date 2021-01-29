@@ -227,13 +227,13 @@
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
-    $fp = fwrite($fp, $calc);
-    $fp = fclose($fp);
+    //$fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
+    //$fp = fwrite($fp, $calc);
+    //$fp = fclose($fp);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($calc); ?>
-            test2 = <?php echo json_encode($fp1); ?>
+            test2 = <?php echo json_encode($fp); ?>
     </script>
 </body>
 </html>
