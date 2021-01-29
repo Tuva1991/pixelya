@@ -224,13 +224,13 @@
     $calc = $fp + 1;
     $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w+");
     fwrite($fp1,$clac);
+    fclose($fp);
     fclose($fp1);
-    fclose($fp2);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($fp); ?>;
         console.log(test);
-        console.log("testさん")
+        console.log("testさん");
     </script>
 </body>
 </html>
