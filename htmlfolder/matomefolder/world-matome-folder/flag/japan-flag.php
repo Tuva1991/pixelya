@@ -228,6 +228,7 @@
     <script type="text/javascript">
         let test = <?php echo json_encode($txt); ?>
         console.log(test)
+        console.log("testさん")
     </script>
 </body>
 </html>
