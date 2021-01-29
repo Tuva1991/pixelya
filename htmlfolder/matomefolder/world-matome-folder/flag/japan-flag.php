@@ -43,6 +43,8 @@
                 例
                 <p style=" font-size: 22px; text-align: right; width: 240px; right: 10px; position: relative;">「国旗のドット絵」X<br>国旗」○</p>
                 </p>
+                <p id="result" style=" font-size: 22px; text-align: right; width: 240px; right: 10px; position: relative;"></p>
+                </p>
             </div>
         </div>
         <div class="tab-below-space">
@@ -229,8 +231,10 @@
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($fp); ?>;
+        var result = document.getElementById("result");
         console.log(test);
         console.log("testさん");
+        result.innerHTML = test;
     </script>
 </body>
 </html>
