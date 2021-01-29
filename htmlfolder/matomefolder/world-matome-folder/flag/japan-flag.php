@@ -221,11 +221,12 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
+    $txt = fgets($fp);
     // fwrite($fp,"ファイルへの書き込みサンプル");
     // fclose($fp);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($fp); ?>
+        var test = <?php echo json_encode($text); ?>
         console.log(test)
     </script>
 </body>
