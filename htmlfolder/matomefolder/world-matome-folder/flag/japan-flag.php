@@ -222,9 +222,10 @@
     <?php
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $calc = fgets($fp + 1);
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","+w");
-    fwrite($fp,$clac);
-    fclose($fp);
+    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","+w");
+    fwrite($fp1,$clac);
+    fclose($fp1);
+    fclose($fp2);
     ?>
     <script type="text/javascript">
         let test = <?php echo json_encode($clac); ?>
