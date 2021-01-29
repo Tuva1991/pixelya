@@ -228,8 +228,8 @@
     $calc = $calc + 1;
     $calc = (string) $calc;
     $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
-    fwrite($fp1, $calc);
-    fclose($fp1);
+    //fwrite($fp1, $calc);
+    //fclose($fp1);
     ?>
     <script type="text/javascript">
         var test = <?php echo json_encode($calc); ?>
