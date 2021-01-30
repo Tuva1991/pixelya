@@ -227,7 +227,7 @@
     $calc++;
     $hoge = fclose($fp);
     $fp = fopen($link, "w");
-    fwrite($fp, $calc);
+    //fwrite($fp, $calc);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
