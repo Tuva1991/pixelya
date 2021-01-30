@@ -54,6 +54,11 @@
         var japan_flag = <?php echo json_encode($japan_flag);?>;
             hoge = 0;
             max = Math.max(hoge,japan_flag);
+            date = [japan_flag,hoge]
+            for(let i = 0; i<datecount; i++)
+            {
+
+            }
         console.log(max);
     </script>
 </body>
