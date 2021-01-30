@@ -228,9 +228,9 @@
     $calc = $calc + 1;
     $calc = (string) $calc;
     //$hoge2 = fwrite($fp, $calc);
-    $hoge = fclose($fp);
-    unset($fp);
-    $fp = fopen($link,"w");
+    //$hoge = fclose($fp);
+    //unset($fp);
+    //$fp = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
     ?>
     <script type="text/javascript">
