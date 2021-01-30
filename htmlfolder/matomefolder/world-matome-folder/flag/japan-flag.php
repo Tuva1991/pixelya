@@ -227,8 +227,8 @@
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
-    $hoge2 = fwrite($fp, $calc);
-    $hoge = fclose($fp);
+    //$hoge2 = fwrite($fp, $calc);
+    //$hoge = fclose($fp);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
