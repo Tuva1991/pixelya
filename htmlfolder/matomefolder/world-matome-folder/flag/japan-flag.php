@@ -227,7 +227,7 @@
     //$calc++;
     //$hoge = fclose($fp);
     $clac = "inukawaii";
-    $fp = fopen($link, "w");
+    $fp = fopen($link, 'w');
     //fwrite($fp, $calc);
     ?>
     <script type="text/javascript">
