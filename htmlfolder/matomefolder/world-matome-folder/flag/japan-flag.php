@@ -230,7 +230,7 @@
     //$hoge2 = fwrite($fp, $calc);
     $hoge = fclose($fp);
     $hoge2 = unset($fp);
-    $fp1 = fopen($link,"w");
+    $fp = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
     ?>
     <script type="text/javascript">
