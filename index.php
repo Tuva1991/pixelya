@@ -16,7 +16,7 @@
                 <ul>
                     <li><a href="htmlfolder/shinchakuosusume.html">新着おすすめ</a></li>
                     <li><a href="htmlfolder/sakushaosusume.html">作者からのおすすめ</a></li>
-                    <li><a href="htmlfolder/etsuransuuosusume.html">閲覧数の多いおすすめ</a></li> 
+                    <li><a href="htmlfolder/etsuransuuosusume.php">閲覧数の多いおすすめ</a></li> 
                 </ul>
             </li>
             <li><a href="htmlfolder/riyoukiyaku.html">[利用規約]</a></li>
