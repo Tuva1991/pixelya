@@ -222,16 +222,13 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $link = "https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt";
-    $fp = fopen($link,"r");
-    $calc = fgets($fp);
-    $calc = (int) $calc;
-    $calc = $calc + 1;
-    $calc = (string) $calc;
-    $hoge = fclose($fp);
-    //$hoge2 = fwrite($link, $calc);
-    //unset($fp);
-    //$fp = fopen($link,"w");
-    //$hoge2 = fwrite($fp, $calc);
+    $fp = fopen($link,"r+");
+    $calc = fgets($fp, 32);// fgets関数でカウント数を読み込むらしい
+    $calc++; // カウント数を加算らしい
+    fseek($fp, 0); // fseek関数で読み書きを行う場所を先頭に戻すらしい
+    fputs($fp, $calc); // fputs関数でカウントされた数をファイルに書き込むらしい
+    //flock($fp, LOCK_UN); // flock関数でファイルを上書きされないようにロックするらしい でも LOCK_UNじゃ解除しちゃうんじゃ?
+    fclose($fp); // fclose関数でファイルを閉じる
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
