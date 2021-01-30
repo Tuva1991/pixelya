@@ -226,7 +226,7 @@
     $calc = fgets($fp);
     $calc++;
     $hoge = fclose($fp);
-    $fp = fopen($link,"w");
+    $fp = fopen($link, "w");
     fwrite($fp, $calc);
     ?>
     <script type="text/javascript">
