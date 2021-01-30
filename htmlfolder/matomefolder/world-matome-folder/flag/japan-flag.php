@@ -230,12 +230,13 @@
     //$hoge2 = fwrite($fp, $calc);
     $hoge = fclose($fp);
     unset($fp);
-    $fp = fopen($link,"w");
+    $fp1 = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
+    $hoge1 = fclose($fp1);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
-            open = <?php echo json_encode($fp); ?>
+            open = "<?php echo json_encode($fp); ?>"
             link = <?php echo json_encode($link); ?>
             close = <?php echo json_encode($hoge); ?>
             hoge1 = <?php echo json_encode($hoge1); ?>
