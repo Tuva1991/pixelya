@@ -51,10 +51,10 @@
     $japan_flag = (int) $japan_flag;
     ?>
     <script>
-        var japan_flag = <?php echo json_encode($japan_flag);?>
-            hoge = 0
-            max = Math.max(hoge,japan_flag)
-        console.log(max)
+        var japan_flag = <?php echo json_encode($japan_flag);?>;
+            hoge = 0;
+            max = Math.max(hoge,japan_flag);
+        console.log(max);
     </script>
 </body>
 </html>
