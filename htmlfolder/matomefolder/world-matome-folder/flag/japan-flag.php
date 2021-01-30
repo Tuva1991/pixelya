@@ -236,9 +236,7 @@
     $calc++;
     $calc = (string) $calc;
     fclose($fp);
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", "w");
-    $hoge2 = fwrite($fp1, $calc);
-    fclose($fp);
+    file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", $calc);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
