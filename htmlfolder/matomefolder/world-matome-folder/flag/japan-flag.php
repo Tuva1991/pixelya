@@ -224,7 +224,7 @@
     $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
     $calc = fgets($fp);
     $hoge = fclose($fp);
-    unlink("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt");
+    $hoge2 = unlink("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt");
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
