@@ -235,9 +235,9 @@
     $calc = (int) $calc;
     $calc++;
     $calc = (string) $calc;
-    $hoge2 = file_put_contents($link, $calc);
     fclose($fp);
     $fp = null;
+    $hoge2 = file_put_contents($link, $calc);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
