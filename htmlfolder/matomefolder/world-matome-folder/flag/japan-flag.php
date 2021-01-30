@@ -234,9 +234,10 @@
     $calc = fgets($fp);
     $calc = (int) $calc;
     $calc++;
-    //$calc = (string) $calc;
-    fclose($fp);
+    $calc = (string) $calc;
     file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", $calc);
+    fclose($fp);
+    $fp = null;
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
