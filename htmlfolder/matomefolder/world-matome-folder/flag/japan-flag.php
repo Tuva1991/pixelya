@@ -235,7 +235,7 @@
     $calc = (int) $calc;
     $calc++;
     $calc = (string) $calc;
-    $hoge2 = file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", $calc);
+    $hoge2 = file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", "2");
     fclose($fp);
     $fp = null;
     ?>
