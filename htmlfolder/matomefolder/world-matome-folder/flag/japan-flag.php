@@ -222,24 +222,20 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $link = "https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt";
-    $fp = fopen($link,"r");
-    //$calc = fgets($fp);
-    //$hoge = fclose($fp);
-    //$hoge1 = unlink($link);
-    //$calc = (int) $calc;
-    //$calc = $calc + 1;
-    //$calc = (string) $calc;
-    //$fp1 = fopen($link,"w");
-    //$hoge2 = fwrite($fp1, $calc);
-    //$hoge = fclose($fp1);
+    $fp = fopen($link,"a+");
+    $calc = fgets($fp);
+    $calc = (int) $calc;
+    $calc = $calc + 1;
+    $calc = (string) $calc;
+    $hoge2 = fwrite($fp, $calc);
+    $hoge = fclose($fp);
     ?>
     <script type="text/javascript">
-        var test = <?php echo json_encode($calc); ?>
-            test1 = <?php echo json_encode($fp); ?>
-            test2 = <?php echo json_encode($fp1); ?>
-            hoge = <?php echo json_encode($hoge); ?>
+        var clac = <?php echo json_encode($calc); ?>
+            open = <?php echo json_encode($fp); ?>
+            close = <?php echo json_encode($hoge); ?>
             hoge1 = <?php echo json_encode($hoge1); ?>
-            hoge2 = <?php echo json_encode($hoge2); ?>
+            write = <?php echo json_encode($hoge2); ?>
     </script>
 </body>
 </html>
