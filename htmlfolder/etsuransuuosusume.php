@@ -48,10 +48,11 @@
     $link = 'https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/counter-japan-flag.txt';
     $fp = fopen($link, "r");
     $japan_flag = fgets($fp);
+    $japan_flag = (int) $japan_flag;
     ?>
     <script>
         let japan_flag = <?php echo json_encode($japan_flag);?>
-        console.log(Math.max.apply(null, japan_flag))
+        console.log(Math.max.apply(null, japan_flag);)
     </script>
 </body>
 </html>
