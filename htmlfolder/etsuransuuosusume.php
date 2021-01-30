@@ -52,7 +52,8 @@
     ?>
     <script>
         let japan_flag = <?php echo json_encode($japan_flag);?>
-        console.log(Math.max.apply(null, japan_flag);)
+            max = Math.max(null,japan_flag);
+        console.log(max)
     </script>
 </body>
 </html>
