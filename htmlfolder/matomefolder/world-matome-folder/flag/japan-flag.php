@@ -234,7 +234,7 @@
     $calc = fgets($fp);
     $calc = (int) $calc;
     $calc++;
-    $calc = (string) $calc;
+    //$calc = (string) $calc;
     fclose($fp);
     file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", $calc);
     ?>
