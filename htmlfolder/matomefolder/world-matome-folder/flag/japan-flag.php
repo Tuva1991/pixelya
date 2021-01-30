@@ -229,10 +229,9 @@
     $calc = (string) $calc;
     //$hoge2 = fwrite($fp, $calc);
     $hoge = fclose($fp);
-    unset($fp);
+    $hoge2 = unset($fp);
     $fp1 = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
-    $hoge1 = fclose($fp1);
     ?>
     <script type="text/javascript">
         var clac = <?php echo json_encode($calc); ?>
