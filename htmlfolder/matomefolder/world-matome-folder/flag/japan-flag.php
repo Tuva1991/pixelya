@@ -221,7 +221,7 @@
     </div>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
-    //$link = 'https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt';
+    $link = 'https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt';
     //$fp = fopen($link,'r');
     //$calc = fgets($fp);
     //$calc++;
@@ -235,7 +235,7 @@
     $calc = (int) $calc;
     $calc++;
     $calc = (string) $calc;
-    $hoge2 = file_put_contents("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", "2");
+    $hoge2 = file_put_contents($link, $calc);
     fclose($fp);
     $fp = null;
     ?>
