@@ -221,14 +221,15 @@
     </div>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","r");
-    $calc = fgets($fp);
-    $hoge = fclose($fp);
-    $hoge2 = unlink("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt");
-    $calc = (int) $calc;
-    $calc = $calc + 1;
-    $calc = (string) $calc;
-    $fp1 = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt","w");
+    $link = "https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt";
+    $fp = fopen($link,"r");
+    //$calc = fgets($fp);
+    //$hoge = fclose($fp);
+    //$hoge1 = unlink($link);
+    //$calc = (int) $calc;
+    //$calc = $calc + 1;
+    //$calc = (string) $calc;
+    //$fp1 = fopen($link,"w");
     //$hoge2 = fwrite($fp1, $calc);
     //$hoge = fclose($fp1);
     ?>
@@ -237,6 +238,7 @@
             test1 = <?php echo json_encode($fp); ?>
             test2 = <?php echo json_encode($fp1); ?>
             hoge = <?php echo json_encode($hoge); ?>
+            hoge1 = <?php echo json_encode($hoge1); ?>
             hoge2 = <?php echo json_encode($hoge2); ?>
     </script>
 </body>
