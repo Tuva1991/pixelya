@@ -221,7 +221,7 @@
     </div>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
-    $link = 'https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt';
+    $link = 'counter-japan-flag.txt';
     //$fp = fopen($link,'r');
     //$calc = fgets($fp);
     //$calc++;
@@ -230,7 +230,7 @@
     //$fp = fopen($link, "w");
     //fwrite($fp,$calc);
     //fclose($fp);
-    $fp = fopen("https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt", "r");
+    $fp = fopen("counter-japan-flag.txt", "r");
     $calc = fgets($fp);
     $calc = (int) $calc;
     $calc++;
