@@ -227,8 +227,8 @@
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
-    //$hoge2 = fwrite($link, $calc);
-    //$hoge = fclose($fp);
+    $hoge = fclose($fp);
+    $hoge2 = fwrite($link, $calc);
     //unset($fp);
     //$fp = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
