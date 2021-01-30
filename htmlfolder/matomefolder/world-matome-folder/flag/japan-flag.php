@@ -229,7 +229,7 @@
     $calc = (string) $calc;
     //$hoge2 = fwrite($fp, $calc);
     $hoge = fclose($fp);
-    $hoge2 = unset($fp);
+    unset($fp);
     $fp = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
     ?>
