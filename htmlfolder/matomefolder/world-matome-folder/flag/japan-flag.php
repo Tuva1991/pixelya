@@ -222,13 +222,13 @@
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
     <?php
     $link = "https://lit-fortress-24137.herokuapp.com/counter-japan-flag.txt";
-    $fp = fopen($link,"r+");
+    $fp = fopen($link,"r");
     $calc = fgets($fp);
     $calc = (int) $calc;
     $calc = $calc + 1;
     $calc = (string) $calc;
-    //$hoge2 = fwrite($fp, $calc);
-    //$hoge = fclose($fp);
+    $hoge2 = fwrite($link, $calc);
+    $hoge = fclose($fp);
     //unset($fp);
     //$fp = fopen($link,"w");
     //$hoge2 = fwrite($fp, $calc);
