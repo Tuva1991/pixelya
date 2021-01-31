@@ -6,10 +6,10 @@
         $link = 'comment.txt';
         $br = "<br>";
         date_default_timezone_set('Asia/Tokyo');
-        $date = new DateTime('now');
+        $today = date("Y-m-d H:i:s");
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = $date.$br.$comment.$br.$string;
+        $string = "日本時間".$date.$br.$comment.$br.$br.$string;
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
