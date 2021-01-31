@@ -53,7 +53,7 @@
                     記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
                     不定期の更新でリセットされます。
                 </p>
-                <ul class="image-ul" style="position: relative;">
+                <ul class="image-ul" style="position: relative; bottom: 300px;">
                 <li style="display: inline-block;"><!--image No.001-->
                         <div class="imagebase">
                             <a id="image-anchor-01" class="imageanchor" href="">
