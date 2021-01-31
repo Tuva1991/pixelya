@@ -45,7 +45,7 @@
         </div>
         <div class="tab-below-space">
         <div class="tab-below-space-cover"></div>
-            <div style="position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
+            <div style=" top: 150px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: center; width: 50% ;">
                     ここは閲覧数によるおすすめを乗っけています。<br>
