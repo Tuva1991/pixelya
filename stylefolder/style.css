@@ -310,4 +310,7 @@ body
 .comment-button
 {
   height: 24px;
+  position: relative;
+  left: 24px;
+  top: 400px;
 }
