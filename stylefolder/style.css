@@ -287,16 +287,25 @@ body
 {
   font-size: 32px;
   color: white;
+  position: relative;
+  left: 24px;
+  top: 400px;
 }
 .comment-subtitle
 {
   font-size: 20px;
   color: white;
+  position: relative;
+  left: 24px;
+  top: 400px;
 }
 .comment-text
 {
   font-size: 24px;
   color: white;
+  position: relative;
+  left: 24px;
+  top: 400px;
 }
 .comment-button
 {
