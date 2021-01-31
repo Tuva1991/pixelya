@@ -45,7 +45,7 @@
         </div>
         <div class="tab-below-space">
         <div class="tab-below-space-cover"></div>
-            <div style=" top: 150px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
+            <div style=" top: 160px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: center; width: 50% ;">
                     ここは閲覧数によるおすすめを乗っけています。<br>
@@ -53,7 +53,6 @@
                     記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
                     不定期の更新でリセットされます。
                 </p>
-            </div>
             <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
                         <div class="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
@@ -143,6 +142,7 @@
                     <text id="image-txt-10" class="image-text">No image</text>
                 </li>
         </ul>
+        </div>
         </div>
     </div>
     <?php
