@@ -153,10 +153,11 @@
         $link = 'comment.txt';
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = $comment;
+        $string = $comment.$string;
+        mb_convert_encoding($string, "utf-8");
         fclose($fp);
         $fp = null;
-        file_put_contents($link, $comment);
+        file_put_contents($link, $string);
     }
     ?>
     <script src="javascriptfolder/search.js"></script>
