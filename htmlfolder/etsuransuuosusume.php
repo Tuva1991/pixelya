@@ -43,6 +43,107 @@
                 </p>
             </div>
         </div>
+        <div class="tab-below-space">
+        <div class="tab-below-space-cover"></div>
+            <div style="top: 400px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
+                <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
+                <p style="text-align: center; width: 50% ;">
+                    ここは閲覧数によるおすすめを乗っけています。<br>
+                    はっきり言ってIPアドレスとかで直近の訪問者とか<br>
+                    記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
+                    不定期の更新でリセットされます。
+                </p>
+            </div>
+            <ul class="image-ul">
+                <li style="display: inline-block;"><!--image No.001-->
+                        <div class="imagebase">
+                            <a class="imageanchor" href="flag/japan-flag.php">
+                                <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </a>
+                        </div>
+                    <text id="image-txt-01" class="image-text">日本関連の旗まとめ</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.002-->
+                    <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-02" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-02" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.003-->
+                   <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-03" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-03" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.004-->
+                   <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-04" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-04" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.005-->
+                    <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-05" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-05" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.006-->
+                   <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-06" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-06" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.007-->
+                   <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-07" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
+                            </image>
+                        </a>
+                    </div>
+                    <text id="image-txt-07" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.008-->
+                    <div class="imagebase">
+                        <a class="imageanchor">
+                            <image id="image-08" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" >
+                            </image>
+                    </a>
+                    </div>
+                    <text class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.009-->
+                   <div class="imagebase">
+                            <a class="imageanchor">
+                                <image id="image-09" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
+                            </a>
+                        </div>
+                    <text id="image-txt-09" class="image-text">No image</text>
+                </li>
+                <li style="display: inline-block;"><!--image No.010-->
+                   <div class="imagebase">
+                            <a class="imageanchor">
+                                <image id="image-10" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
+                            </a>
+                        </div>
+                    <text id="image-txt-10" class="image-text">No image</text>
+                </li>
+        </ul>
+        </div>
     </div>
     <?php
     $link = 'https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/counter-japan-flag.txt';
@@ -54,14 +155,46 @@
         var japan_flag = <?php echo json_encode($japan_flag);?>;
             hoge = 0;
             max = Math.max(hoge,japan_flag);
-            date = [japan_flag,hoge]
+            date = [japan_flag,hoge];
+            image = ["https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png"];
+            txt = ["日本国旗"];
             datecount = date.length;
+            x = 0
+            image01 = document.getelementById("image-01");
+            image02 = document.getelementById("image-02");
+            image03 = document.getelementById("image-03");
+            image04 = document.getelementById("image-04");
+            image05 = document.getelementById("image-05");
+            image06 = document.getelementById("image-06");
+            image07 = document.getelementById("image-07");
+            image08 = document.getelementById("image-08");
+            image09 = document.getelementById("image-09");
+            image10 = document.getelementById("image-10");
+            imagetxt01 = document.getelementById("image-txt-01");
+            imagetxt02 = document.getelementById("image-txt-02");
+            imagetxt03 = document.getelementById("image-txt-03");
+            imagetxt04 = document.getelementById("image-txt-04");
+            imagetxt05 = document.getelementById("image-txt-05");
+            imagetxt06 = document.getelementById("image-txt-06");
+            imagetxt07 = document.getelementById("image-txt-07");
+            imagetxt08 = document.getelementById("image-txt-08");
+            imagetxt09 = document.getelementById("image-txt-09");
+            imagetxt10 = document.getelementById("image-txt-10");
             for(let i = 0; i<datecount; i++)
             {
                 date.forEach(a =>
-                max = 
+                if(max = a)
+                {
+                    image01.src = image[x];
+                    imagetxt01.innerHTML = txt[x];
+                }
+                else
+                {
+                    x += 1;
+                }
                 )
             }
+
         console.log(max);
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
