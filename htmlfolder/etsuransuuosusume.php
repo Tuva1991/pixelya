@@ -152,51 +152,7 @@
     $japan_flag = (int) $japan_flag;
     ?>
     <script>
-        var japan_flag = <?php echo json_encode($japan_flag);?>;
-            hoge = 0;
-            max = Math.max(hoge,japan_flag);
-            date = [{name: japan_flag,  value: <?php echo json_encode($japan_flag);?>, image: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", txt: "日本国旗"},
-                    {name: hoge, value: 0, image: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", txt: noimage}];
-            image = ["https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png"];
-            txt = ["日本国旗"];
-            datecount = date.length;
-            x = 0
-            image01 = document.getelementById("image-01");
-            image02 = document.getelementById("image-02");
-            image03 = document.getelementById("image-03");
-            image04 = document.getelementById("image-04");
-            image05 = document.getelementById("image-05");
-            image06 = document.getelementById("image-06");
-            image07 = document.getelementById("image-07");
-            image08 = document.getelementById("image-08");
-            image09 = document.getelementById("image-09");
-            image10 = document.getelementById("image-10");
-            imagetxt01 = document.getelementById("image-txt-01");
-            imagetxt02 = document.getelementById("image-txt-02");
-            imagetxt03 = document.getelementById("image-txt-03");
-            imagetxt04 = document.getelementById("image-txt-04");
-            imagetxt05 = document.getelementById("image-txt-05");
-            imagetxt06 = document.getelementById("image-txt-06");
-            imagetxt07 = document.getelementById("image-txt-07");
-            imagetxt08 = document.getelementById("image-txt-08");
-            imagetxt09 = document.getelementById("image-txt-09");
-            imagetxt10 = document.getelementById("image-txt-10");
-            for(let i = 0; i<datecount; i++)
-            {
-                date.forEach(a =>
-                if(max = a)
-                {
-                    image01.src = date.image[x];
-                    imagetxt01.innerHTML = date.txt[x];
-                }
-                else
-                {
-                    x += 1;
-                }
-                )
-            }
-
-        console.log(max);
+        var a = [{name = japan-flag, value = <?php echo json_encode($japan_flag);?>},{}]
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
