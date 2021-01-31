@@ -285,7 +285,7 @@ body
 }
 .comment-title
 {
-  font-size: 32px;
+  font-size: 40px;
   color: white;
   position: relative;
   left: 24px;
@@ -293,7 +293,7 @@ body
 }
 .comment-subtitle
 {
-  font-size: 20px;
+  font-size: 32px;
   color: white;
   position: relative;
   left: 24px;
@@ -302,7 +302,7 @@ body
 .comment-text
 {
   font-family: 'pixel';
-  font-size: 24px;
+  font-size: 32px;
   color: black;
   position: relative;
   left: 24px;
@@ -310,15 +310,16 @@ body
 }
 .comment-button
 {
-  height: 24px;
+  font-family: 'pixel';
+  font-size: 32px;
+  height: 32px;
   position: relative;
   left: 24px;
   top: 400px;
 }
 .comment-list
 {
-  height: 20px;
-  font-family: 'pixel';
+  height: 32px;
   position: relative;
   left: 24px;
   top: 400px;
