@@ -155,26 +155,26 @@
         var a = [{name: "japan_flag", value: <?php echo json_encode($japan_flag);?>, txt: "日本国旗", imagelink: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", link: "https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php"},
                  {name: "no-image", value: 0, txt: "No image" ,imagelink: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", link: ""},
                 ]
-            image01 = document.getelementById("image-01");
-            image02 = document.getelementById("image-02");
-            image03 = document.getelementById("image-03");
-            image04 = document.getelementById("image-04");
-            image05 = document.getelementById("image-05");
-            image06 = document.getelementById("image-06");
-            image07 = document.getelementById("image-07");
-            image08 = document.getelementById("image-08");
-            image09 = document.getelementById("image-09");
-            image10 = document.getelementById("image-10");
-            imagetxt01 = document.getelementById("image-txt-01");
-            imagetxt02 = document.getelementById("image-txt-02");
-            imagetxt03 = document.getelementById("image-txt-03");
-            imagetxt04 = document.getelementById("image-txt-04");
-            imagetxt05 = document.getelementById("image-txt-05");
-            imagetxt06 = document.getelementById("image-txt-06");
-            imagetxt07 = document.getelementById("image-txt-07");
-            imagetxt08 = document.getelementById("image-txt-08");
-            imagetxt09 = document.getelementById("image-txt-09");
-            imagetxt10 = document.getelementById("image-txt-10");
+        var image01 = document.getElementById("image-01");
+            image02 = document.getElementById("image-02");
+            image03 = document.getElementById("image-03");
+            image04 = document.getElementById("image-04");
+            image05 = document.getElementById("image-05");
+            image06 = document.getElementById("image-06");
+            image07 = document.getElementById("image-07");
+            image08 = document.getElementById("image-08");
+            image09 = document.getElementById("image-09");
+            image10 = document.getElementById("image-10");
+            imagetxt01 = document.getElementById("image-txt-01");
+            imagetxt02 = document.getElementById("image-txt-02");
+            imagetxt03 = document.getElementById("image-txt-03");
+            imagetxt04 = document.getElementById("image-txt-04");
+            imagetxt05 = document.getElementById("image-txt-05");
+            imagetxt06 = document.getElementById("image-txt-06");
+            imagetxt07 = document.getElementById("image-txt-07");
+            imagetxt08 = document.getElementById("image-txt-08");
+            imagetxt09 = document.getElementById("image-txt-09");
+            imagetxt10 = document.getElementById("image-txt-10");
             arr.sort(function(a, b) {
                 if (a.value > b.value)
                 {
