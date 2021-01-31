@@ -175,7 +175,7 @@
             imagetxt08 = document.getElementById("image-txt-08");
             imagetxt09 = document.getElementById("image-txt-09");
             imagetxt10 = document.getElementById("image-txt-10");
-            arr.sort(function(a, b) {
+            a.sort(function(a, b) {
                 if (a.value > b.value)
                 {
                     return -1;
