@@ -303,7 +303,7 @@ body
 {
   font-family: 'pixel';
   font-size: 24px;
-  color: white;
+  color: black;
   position: relative;
   left: 24px;
   top: 400px;
@@ -318,7 +318,9 @@ body
 .comment-list
 {
   height: 20px;
+  font-family: 'pixel';
   position: relative;
   left: 24px;
   top: 400px;
+  color: white;
 }
