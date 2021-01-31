@@ -137,12 +137,10 @@
             <div　class="comment"><!-- コメント機能 -->
                 <text class="comment-title">コメント機能<br></text>
                 <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字</text>
-                <p>
-                    <form action = "index.php" method = "post">
-                        <input type="text" class="comment-text" maxlength="50" name ="comment/">
-                        <input type="submit" class="comment-button" value= "送信">
-                    </form>
-                </p>
+                <form action = "index.php" method="post">
+                    <input type="text" class="comment-text" maxlength="50" name ="comment">
+                    <input type="submit" class="comment-button" value= "送信">
+                </form>
             </div>
         </div>
         </div>
@@ -150,14 +148,14 @@
     <?php
     if(isset($_POST['comment']))
     {
-        $comment = $_POST['comment/'];
+        $comment = $_POST['comment'];
         //$comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         $link = 'comment.txt';
-        $fp = fopen("comment.txt", "r");
-        $string = fgets($fp);
-        $string = $comment;
-        fclose($fp);
-        $fp = null;
+        //$fp = fopen("comment.txt", "r");
+        //$string = fgets($fp);
+        //$string = $comment;
+        //fclose($fp);
+        //$fp = null;
         file_put_contents($link, $comment);
     }
     ?>
