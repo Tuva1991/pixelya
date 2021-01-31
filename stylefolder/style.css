@@ -301,8 +301,9 @@ body
 }
 .comment-text
 {
+  font-family: 'pixel';
   font-size: 24px;
-  color: black;
+  color: white;
   position: relative;
   left: 24px;
   top: 400px;
@@ -310,6 +311,13 @@ body
 .comment-button
 {
   height: 24px;
+  position: relative;
+  left: 24px;
+  top: 400px;
+}
+.comment-list
+{
+  height: 20px;
   position: relative;
   left: 24px;
   top: 400px;
