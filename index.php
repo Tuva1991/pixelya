@@ -140,7 +140,7 @@
                 <p>
                     <form action = "index.php" method = "post">
                         <input type="text" class="comment-text" maxlength="50" name ="comment/">
-                        <input type="button" class="comment-button" value= "送信" onclick="comment();" id="comment-button">
+                        <input type="button" class="comment-button" value= "送信">
                     </form>
                 </p>
             </div>
