@@ -53,7 +53,7 @@
                     記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
                     不定期の更新でリセットされます。
                 </p>
-                <ul class="image-ul">
+                <ul class="image-ul" style="position: relative;">
                 <li style="display: inline-block;"><!--image No.001-->
                         <div class="imagebase">
                             <a id="image-anchor-01" class="imageanchor" href="">
@@ -195,16 +195,16 @@
                     return 1;
                 }
             });
-            image01.src = a[0].imagelink; imagetxt01.innerHTML = a[0].txt; imagetxt01.href = a[0].link;
-            image02.src = a[1].imagelink; imagetxt02.innerHTML = a[1].txt; imagetxt02.href = a[1].link;
-            /*image03.src = a[2].imagelink; imagetxt03.innerHTML = a[2].txt; imagetxt03.href = a[2].link;
-            image04.src = a[3].imagelink; imagetxt04.innerHTML = a[3].txt; imagetxt04.href = a[3].link;
-            image05.src = a[4].imagelink; imagetxt05.innerHTML = a[4].txt; imagetxt05.href = a[4].link;
-            image06.src = a[5].imagelink; imagetxt06.innerHTML = a[5].txt; imagetxt06.href = a[5].link;
-            image07.src = a[6].imagelink; imagetxt07.innerHTML = a[6].txt; imagetxt07.href = a[6].link;
-            image08.src = a[7].imagelink; imagetxt08.innerHTML = a[7].txt; imagetxt08.href = a[7].link;
-            image09.src = a[8].imagelink; imagetxt09.innerHTML = a[8].txt; imagetxt09.href = a[8].link;
-            image10.src = a[9].imagelink; imagetxt10.innerHTML = a[9].txt; imagetxt10.href = a[9].link;*/
+            image01.src = a[0].imagelink; imagetxt01.innerHTML = a[0].txt; imageanchor01.href = a[0].link; //左から 画像変更  テキスト変更 アンカータグの リンク飛ぶやつの変更って感じです。
+            image02.src = a[1].imagelink; imagetxt02.innerHTML = a[1].txt; imageanchor02.href = a[1].link;
+            /*image03.src = a[2].imagelink; imagetxt03.innerHTML = a[2].txt; imageanchor03.href = a[2].link;
+            image04.src = a[3].imagelink; imagetxt04.innerHTML = a[3].txt; imageanchor04.href = a[3].link;
+            image05.src = a[4].imagelink; imagetxt05.innerHTML = a[4].txt; imageanchor05.href = a[4].link;
+            image06.src = a[5].imagelink; imagetxt06.innerHTML = a[5].txt; imageanchor06.href = a[5].link;
+            image07.src = a[6].imagelink; imagetxt07.innerHTML = a[6].txt; imageanchor07.href = a[6].link;
+            image08.src = a[7].imagelink; imagetxt08.innerHTML = a[7].txt; imageanchor08.href = a[7].link;
+            image09.src = a[8].imagelink; imagetxt09.innerHTML = a[8].txt; imageanchor09.href = a[8].link;
+            image10.src = a[9].imagelink; imagetxt10.innerHTML = a[9].txt; imageanchor10.href = a[9].link;*/
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
