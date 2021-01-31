@@ -56,7 +56,7 @@
                 <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
                         <div class="imagebase">
-                            <a class="imageanchor" href="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
+                            <a class="imageanchor" href="">
                                 <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </a>
                         </div>
@@ -64,7 +64,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.002-->
                     <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-02" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -73,7 +73,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.003-->
                    <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-03" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -82,7 +82,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.004-->
                    <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-04" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -91,7 +91,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.005-->
                     <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-05" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -100,7 +100,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.006-->
                    <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-06" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -109,7 +109,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.007-->
                    <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-07" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -118,7 +118,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.008-->
                     <div class="imagebase">
-                        <a class="imageanchor">
+                        <a class="imageanchor" href="">
                             <image id="image-08" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" >
                             </image>
                     </a>
@@ -127,7 +127,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.009-->
                    <div class="imagebase">
-                            <a class="imageanchor">
+                            <a class="imageanchor" href="">
                                 <image id="image-09" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
                             </a>
                         </div>
@@ -135,7 +135,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.010-->
                    <div class="imagebase">
-                            <a class="imageanchor">
+                            <a class="imageanchor" href="">
                                 <image id="image-10" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
                             </a>
                         </div>
@@ -153,7 +153,7 @@
     ?>
     <script>
         var a = [{name: "japan_flag", value: <?php echo json_encode($japan_flag);?>, txt: "日本国旗", imagelink: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", link: "https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php"},
-                 {name: "no-image", value: 0, txt: "No image" ,imagelink: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", link: ""},
+                 {name: "no-image", value: 10, txt: "No image" ,imagelink: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", link: ""},
                 ]
         var image01 = document.getElementById("image-01");
             image02 = document.getElementById("image-02");
@@ -185,7 +185,7 @@
                     return 1;
                 }
             });
-            image01 = a[0].imagelink
+            image01.src = a[0].imagelink
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
