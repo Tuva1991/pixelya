@@ -55,7 +55,7 @@
                 </p>
                 <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
-                        <div class="imahebase">
+                        <div class="imagebase">
                             <a class="imageanchor" href="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
                                 <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </a>
@@ -152,7 +152,7 @@
     $japan_flag = (int) $japan_flag;
     ?>
     <script>
-        var a = [{name: japan-flag, value: <?php echo json_encode($japan_flag);?>},{}]
+        var japan_flag = {value: <?php echo json_encode($japan_flag);?>, txt:日本国旗 ,imagelink: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", link: "https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php"}
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
