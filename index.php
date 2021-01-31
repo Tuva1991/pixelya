@@ -5,10 +5,11 @@
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         $link = 'comment.txt';
         $br = "<br>";
-        $today = date("Y-m-d H:i:s");
+        date_default_timezone_set('Asia/Tokyo');
+        $date = new DateTime('now');
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = $today.$br.$comment.$br.$string;
+        $string = $date.$br.$comment.$br.$string;
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
