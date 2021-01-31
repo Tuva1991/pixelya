@@ -139,7 +139,7 @@
                 <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字</text>
                 <p>
                     <form action="index.php" method="post">
-                        <input type="text" class="comment-text" maxlength="50">
+                        <input type="text" class="comment-text" maxlength="50" name="comment">
                         <input type="button" class="comment-button" value= "送信">
                     </form>    
                 </p>
