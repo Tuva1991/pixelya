@@ -185,7 +185,7 @@
             imageanchor08 = document.getElementById("image-anchor-08");
             imageanchor09 = document.getElementById("image-anchor-09");
             imageanchor10 = document.getElementById("image-anchor-10");
-            a.sort(function(a, b) {
+            a.sort(function(a, b) {// ここは ソートして 並び替えをして、一番大きい順で作ってます。
                 if (a.value > b.value)
                 {
                     return -1;
