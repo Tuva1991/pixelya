@@ -5,9 +5,10 @@
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         $link = 'comment.txt';
         $br = "<br>";
+        $today = date("Y-m-d H:i:s");
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = $comment.$br.$string;
+        $string = $today.$br.$comment.$br.$string;
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
