@@ -310,7 +310,6 @@ body
 }
 .comment-button
 {
-  font-family: 'pixel';
   font-size: 24px;
   position: relative;
   left: 24px;
@@ -318,6 +317,7 @@ body
 }
 .comment-list
 {
+  font-family: 'pixel';
   font-size: 24px;
   position: relative;
   left: 24px;
