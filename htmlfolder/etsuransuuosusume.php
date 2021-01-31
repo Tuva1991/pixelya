@@ -55,8 +55,8 @@
                 </p>
                 <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
-                        <div class="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
-                            <a class="imageanchor" href="flag/japan-flag.php">
+                        <div class="imahebase">
+                            <a class="imageanchor" href="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
                                 <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </a>
                         </div>
@@ -155,7 +155,8 @@
         var japan_flag = <?php echo json_encode($japan_flag);?>;
             hoge = 0;
             max = Math.max(hoge,japan_flag);
-            date = [japan_flag,hoge];
+            date = [{name: japan_flag,  value: <?php echo json_encode($japan_flag);?>, image: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", txt: "日本国旗"},
+                    {name: hoge, value: 0, image: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", txt: noimage}];
             image = ["https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png"];
             txt = ["日本国旗"];
             datecount = date.length;
@@ -185,8 +186,8 @@
                 date.forEach(a =>
                 if(max = a)
                 {
-                    image01.src = image[x];
-                    imagetxt01.innerHTML = txt[x];
+                    image01.src = date.image[x];
+                    imagetxt01.innerHTML = date.txt[x];
                 }
                 else
                 {
