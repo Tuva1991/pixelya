@@ -148,7 +148,7 @@ body
   height: 500%;
   width: 240px;
   background-color: gold;
-  position: absolute; /*絶対位置(自分用)*/
+  position: absolute;
 }
 
 .sponsorlink
@@ -229,7 +229,7 @@ body
   width: 170px;
   height: 170px;
 }
-.image
+.image /* 日本関連の旗まとめ みたいな感じで画像を表示しているところのスタイル */
 {
   display: block;
   position: relative;
@@ -276,4 +276,16 @@ body
 {
   position: relative;
   top: -300;
+}
+.comment-title
+{
+  font-size: 32px;
+}
+.comment-subtitle
+{
+  font-size: 20px;
+}
+.comment-text
+{
+  font-size: 24px;
 }
