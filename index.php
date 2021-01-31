@@ -153,12 +153,12 @@
             </ul>
             <div　class="comment"><!-- コメント機能 -->
                 <text class="comment-title">コメント機能<br></text>
-                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字</text>
+                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字<br></text>
                 <form action = "index.php" method="post">
                     <input type="text" class="comment-text" maxlength="50" name ="comment">
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
-                <text class="comment-list"><?php echo $string?></text>
+                <text class="comment-list"><br><?php echo $string?></text>
             </div>
         </div>
         </div>
