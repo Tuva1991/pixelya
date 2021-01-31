@@ -185,6 +185,7 @@
                     return 1;
                 }
             });
+            console.log(a[0].imagelink)
             image01.src = a[0].imagelink
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
