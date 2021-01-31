@@ -150,15 +150,15 @@
     <?php
     if(isset($_POST['comment']))
     {
-        $comment = $_POST['comment'];
-        $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
+        $comment = $_POST['comment/'];
+        //$comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         $link = 'comment.txt';
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
         $string = $comment;
         fclose($fp);
         $fp = null;
-        file_put_contents($link, $string);
+        file_put_contents($link, $comment);
     }
     ?>
     <script src="javascriptfolder/search.js"></script>
