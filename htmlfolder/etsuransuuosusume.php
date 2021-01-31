@@ -152,7 +152,7 @@
     $japan_flag = (int) $japan_flag;
     ?>
     <script>
-        var a = [{name = japan-flag, value = <?php echo json_encode($japan_flag);?>},{}]
+        var a = [{name: japan-flag, value: <?php echo json_encode($japan_flag);?>},{}]
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
