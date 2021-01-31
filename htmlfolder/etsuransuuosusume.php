@@ -50,7 +50,8 @@
                 <p style="text-align: center; width: 50% ;">
                     ここは閲覧数によるおすすめを乗っけています。<br>
                     はっきり言ってIPアドレスとかで直近の訪問者とか<br>
-                    記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
+                    記録してないので、F5押せば閲覧数が増える
+                    ガバガバです。<br>
                     不定期の更新でリセットされます。
                 </p>
                 <ul class="image-ul" style="position: relative; bottom: 400px;">
