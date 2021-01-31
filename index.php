@@ -1,3 +1,18 @@
+<?php
+    if(isset($_POST['comment']))
+    {
+        $comment = $_POST['comment'];
+        $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
+        $link = 'comment.txt';
+        $br = "<br>";
+        $fp = fopen("comment.txt", "r");
+        $string = fgets($fp);
+        $string = $comment.$br.$string;
+        fclose($fp);
+        $fp = null;
+        file_put_contents($link, $string);
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -141,28 +156,10 @@
                     <input type="text" class="comment-text" maxlength="50" name ="comment">
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
-                <text class="comment-list">
-                    <?php echo $string?>
-                </text>
+                <text class="comment-list"><?php echo $string?></text>
             </div>
         </div>
         </div>
-        <!--ここにコメント作りたい-->
-    <?php
-    if(isset($_POST['comment']))
-    {
-        $comment = $_POST['comment'];
-        $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-        $link = 'comment.txt';
-        $br = "<br>";
-        $fp = fopen("comment.txt", "r");
-        $string = fgets($fp);
-        $string = $comment.$br.$string;
-        fclose($fp);
-        $fp = null;
-        file_put_contents($link, $string);
-    }
-    ?>
     <script src="javascriptfolder/search.js"></script>
 </body>
 </html>
