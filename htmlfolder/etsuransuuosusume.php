@@ -56,7 +56,7 @@
                 <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
                         <div class="imagebase">
-                            <a class="imageanchor" href="">
+                            <a id="image-anchor-01" class="imageanchor" href="">
                                 <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </a>
                         </div>
@@ -64,7 +64,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.002-->
                     <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-02" class="imageanchor" href="">
                             <image id="image-02" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -73,7 +73,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.003-->
                    <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-03" class="imageanchor" href="">
                             <image id="image-03" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -82,7 +82,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.004-->
                    <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-04" class="imageanchor" href="">
                             <image id="image-04" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -91,7 +91,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.005-->
                     <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-05" class="imageanchor" href="">
                             <image id="image-05" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -100,7 +100,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.006-->
                    <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-06" class="imageanchor" href="">
                             <image id="image-06" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -109,7 +109,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.007-->
                    <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-07" class="imageanchor" href="">
                             <image id="image-07" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </image>
                         </a>
@@ -118,7 +118,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.008-->
                     <div class="imagebase">
-                        <a class="imageanchor" href="">
+                        <a id="image-anchor-08" class="imageanchor" href="">
                             <image id="image-08" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" >
                             </image>
                     </a>
@@ -127,7 +127,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.009-->
                    <div class="imagebase">
-                            <a class="imageanchor" href="">
+                            <a id="image-anchor-09" class="imageanchor" href="">
                                 <image id="image-09" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
                             </a>
                         </div>
@@ -135,7 +135,7 @@
                 </li>
                 <li style="display: inline-block;"><!--image No.010-->
                    <div class="imagebase">
-                            <a class="imageanchor" href="">
+                            <a id="image-anchor-10" class="imageanchor" href="">
                                 <image id="image-10" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image">
                             </a>
                         </div>
@@ -152,9 +152,9 @@
     $japan_flag = (int) $japan_flag;
     ?>
     <script>
-        var a = [{name: "japan_flag", value: <?php echo json_encode($japan_flag);?>, txt: "日本国旗", imagelink: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", link: "https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php"},
+        var a = [{name: "japan_flag", value: <?php echo json_encode($japan_flag);?>, txt: "日本関連の旗", imagelink: "https://lit-fortress-24137.herokuapp.com/image/japaneseflag.png", link: "https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php"},
                  {name: "no-image", value: 10, txt: "No image" ,imagelink: "https://lit-fortress-24137.herokuapp.com/image/no-image.png", link: ""},
-                ]
+                ]//コレは全ての画像データを突っ込んでおくところ
         var image01 = document.getElementById("image-01");
             image02 = document.getElementById("image-02");
             image03 = document.getElementById("image-03");
@@ -174,7 +174,17 @@
             imagetxt07 = document.getElementById("image-txt-07");
             imagetxt08 = document.getElementById("image-txt-08");
             imagetxt09 = document.getElementById("image-txt-09");
-            imagetxt10 = document.getElementById("image-txt-10");
+            imagetxt10 = document.getElementById("image-txt-10");//ここは画像リンク や テキストを変更するための変数置き場
+            imageanchor01 = document.getElementById("image-anchor-01");
+            imageanchor02 = document.getElementById("image-anchor-02");
+            imageanchor03 = document.getElementById("image-anchor-03");
+            imageanchor04 = document.getElementById("image-anchor-04");
+            imageanchor05 = document.getElementById("image-anchor-05");
+            imageanchor06 = document.getElementById("image-anchor-06");
+            imageanchor07 = document.getElementById("image-anchor-07");
+            imageanchor08 = document.getElementById("image-anchor-08");
+            imageanchor09 = document.getElementById("image-anchor-09");
+            imageanchor10 = document.getElementById("image-anchor-10");
             a.sort(function(a, b) {
                 if (a.value > b.value)
                 {
@@ -185,8 +195,16 @@
                     return 1;
                 }
             });
-            console.log(a[0].imagelink)
-            image01.src = a[0].imagelink
+            image01.src = a[0].imagelink; imagetxt01.innerHTML = a[0].txt; imagetxt01.href = a[0].link;
+            image02.src = a[1].imagelink; imagetxt02.innerHTML = a[1].txt; imagetxt02.href = a[1].link;
+            /*image03.src = a[2].imagelink; imagetxt03.innerHTML = a[2].txt; imagetxt03.href = a[2].link;
+            image04.src = a[3].imagelink; imagetxt04.innerHTML = a[3].txt; imagetxt04.href = a[3].link;
+            image05.src = a[4].imagelink; imagetxt05.innerHTML = a[4].txt; imagetxt05.href = a[4].link;
+            image06.src = a[5].imagelink; imagetxt06.innerHTML = a[5].txt; imagetxt06.href = a[5].link;
+            image07.src = a[6].imagelink; imagetxt07.innerHTML = a[6].txt; imagetxt07.href = a[6].link;
+            image08.src = a[7].imagelink; imagetxt08.innerHTML = a[7].txt; imagetxt08.href = a[7].link;
+            image09.src = a[8].imagelink; imagetxt09.innerHTML = a[8].txt; imagetxt09.href = a[8].link;
+            image10.src = a[9].imagelink; imagetxt10.innerHTML = a[9].txt; imagetxt10.href = a[9].link;*/
     </script>
     <script src="https://lit-fortress-24137.herokuapp.com/javascriptfolder/search.js"></script>
 </body>
