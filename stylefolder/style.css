@@ -312,14 +312,14 @@ body
 {
   font-family: 'pixel';
   font-size: 32px;
-  height: 32px;
+  height: 40px;
   position: relative;
   left: 24px;
   top: 400px;
 }
 .comment-list
 {
-  height: 32px;
+  font-size: 32px;
   position: relative;
   left: 24px;
   top: 400px;
