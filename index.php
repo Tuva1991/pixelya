@@ -8,6 +8,7 @@
 </head>
 <body>
         <div id="title" class="title">
+            <!--ピクセルやのロゴから 最初のページに飛べます。 ヘッダーは特に意味がありません。-->
             <a href="https://lit-fortress-24137.herokuapp.com"><image class="logo" src="https://lit-fortress-24137.herokuapp.com/image/pixelya-logo.png"></a>
             <image src="https://lit-fortress-24137.herokuapp.com/image/pixelya-header.png" class="header"></image>
         </div>
@@ -25,7 +26,7 @@
         <div class="sidebar">  <!--左にあるサイドバー-->
             <a class="sponsorlink">スポンサード リンク<br>※スポンサーがいるとは言っていない</a>
             <a class="sponsorimage">のーいめーじ</a>
-            <div class="search">
+            <div class="search"> <!--ドット絵のまとめ ページを探しているもの-->
                 <text style="font-size: 24px;">検索</text>
                 <p>
                     <input type="text" id="search" style="font-family: 'pixel-b'; height: 32px;">
@@ -47,7 +48,7 @@
         <!--OOのドット絵のまとめ-->
         <div class="tab-below-space"><!-- タブの下の空間(サイドバーを除く) -->
         <div class="tab-below-space-cover"></div>
-            <ul style="z-index: 0;">
+            <ul style="z-index: 0;">  <!--コレは おそらくwebページ本体を見た方が早いと思うけれど、いろいろなところに飛べるやつです(アバウト)-->
                 <li style="display: inline-block;">
                     <a href="htmlfolder/matomefolder/world-matome.html" style="text-decoration: none;">
                         <image src="image/redtab.png" class="matome">
@@ -133,8 +134,20 @@
                     </a>
                 </li>
             </ul>
+            <div　class="comment"><!-- コメント機能 -->
+                <text class="comment-title">コメント機能</text>
+                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字</text>
+                <p>
+                    <input type="text" class="comment-text" maxlength="50">
+                    <input type="button" class="comment-button">
+                </p>
+            </div>
         </div>
         </div>
+        <!--ここにコメント作りたい-->
+    <?php
+
+    ?>
     <script src="javascriptfolder/search.js"></script>
 </body>
 </html>
