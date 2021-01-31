@@ -9,7 +9,7 @@
         $today = date("Y-m-d H:i:s");
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = "日本時間".$date.$br.$comment.$br.$br.$string;
+        $string = "日本時間".$today.$br.$comment.$br.$br.$string;
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
