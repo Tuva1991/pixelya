@@ -155,7 +155,7 @@
         $link = 'comment.txt';
         $fp = fopen("comment.txt", "r");
         $string = fgets($fp);
-        $string = $string.$comment;
+        $string = $comment;
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
