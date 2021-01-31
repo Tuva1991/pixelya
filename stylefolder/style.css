@@ -301,8 +301,9 @@ body
 }
 .comment-text
 {
+  font-family: 'pixel';
   font-size: 24px;
-  color: white;
+  color: black;
   position: relative;
   left: 24px;
   top: 400px;
