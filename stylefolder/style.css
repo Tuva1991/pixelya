@@ -277,15 +277,28 @@ body
   position: relative;
   top: -300;
 }
+.coment
+{
+  position: relative;
+  left: 24px;
+  top: 400px;
+}
 .comment-title
 {
   font-size: 32px;
+  color: white;
 }
 .comment-subtitle
 {
   font-size: 20px;
+  color: white;
 }
 .comment-text
 {
   font-size: 24px;
+  color: white;
+}
+.comment-button
+{
+  height: 24px;
 }
