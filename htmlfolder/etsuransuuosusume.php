@@ -45,7 +45,7 @@
         </div>
         <div class="tab-below-space">
         <div class="tab-below-space-cover"></div>
-            <div style="top: 400px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
+            <div style="position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: center; width: 50% ;">
                     ここは閲覧数によるおすすめを乗っけています。<br>
@@ -56,7 +56,7 @@
             </div>
             <ul class="image-ul">
                 <li style="display: inline-block;"><!--image No.001-->
-                        <div class="imagebase">
+                        <div class="https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/japan-flag.php">
                             <a class="imageanchor" href="flag/japan-flag.php">
                                 <image id="image-01" src="https://lit-fortress-24137.herokuapp.com/image/no-image.png" class="image" style="height: auto;">
                             </a>
