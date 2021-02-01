@@ -11,10 +11,9 @@
         $string = fgets($fp);
         $string = "日本時間".$today.$br.$comment.$br.$br.$string;
         fclose($fp);
-        unset($comment);
-        unset($string);
         $fp = null;
         file_put_contents($link, $string);
+        header('Location: ./');
     }
     ?>
 <!DOCTYPE html>
@@ -162,6 +161,7 @@
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
                 <text class="comment-list"><br><?php echo $string?></text>
+                <?php unset($string)?>
             </div>
         </div>
         </div>
