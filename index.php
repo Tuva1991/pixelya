@@ -161,7 +161,6 @@
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
                 <text class="comment-list"><br><?php echo $string?></text>
-                <?php unset($string)?>
             </div>
         </div>
         </div>
