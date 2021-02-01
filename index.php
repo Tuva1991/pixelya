@@ -39,6 +39,7 @@
             </li>
             <li><a href="htmlfolder/riyoukiyaku.html">[利用規約]</a></li>
             <li><a href="htmlfolder/sakushanokotoba.html">[作者の言葉]</a></li>
+            <li><a href="htmlfolder/sakuhintoukou.php">[ドット絵投稿]</a></li>
         </ul>
         <div class="sidebar">  <!--左にあるサイドバー-->
             <a class="sponsorlink">スポンサード リンク<br>※スポンサーがいるとは言っていない</a>
