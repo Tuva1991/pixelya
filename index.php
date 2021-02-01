@@ -11,7 +11,8 @@
         $string = fgets($fp);
         $string = "日本時間".$today.$br.$comment.$br.$br.$string;
         fclose($fp);
-        $comment = null;
+        unset($comment);
+        unset($string);
         $fp = null;
         file_put_contents($link, $string);
     }
