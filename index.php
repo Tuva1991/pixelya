@@ -1,19 +1,27 @@
 <?php
     $fp = fopen("comment.txt", "r");
     $string = fgets($fp);
+    $error = null;
     if(isset($_POST['comment']))
     {
         $comment = $_POST['comment'];
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-        $link = 'comment.txt';
-        $br = "<br>";
-        date_default_timezone_set('Asia/Tokyo');
-        $today = date("Y-m-d H:i:s");
-        $string = "日本時間".$today.$br.$comment.$br.$br.$string;
-        fclose($fp);
-        $fp = null;
-        file_put_contents($link, $string);
-        header('Location: https://lit-fortress-24137.herokuapp.com');
+        if(ctype_space($comment))
+        {
+            $error = "エラー：空白文字以外を入力してください。<br>";
+        }
+        else
+        {
+            $link = 'comment.txt';
+            $br = "<br>";
+            date_default_timezone_set('Asia/Tokyo');
+            $today = date("Y-m-d H:i:s");
+            $string = "日本時間".$today.$br.$comment.$br.$br.$string;
+            fclose($fp);
+            $fp = null;
+            file_put_contents($link, $string);
+            header('Location: https://lit-fortress-24137.herokuapp.com');
+        }
     }
     ?>
 <!DOCTYPE html>
@@ -155,7 +163,7 @@
             </ul>
             <div　class="comment"><!-- コメント機能 -->
                 <text class="comment-title">コメント機能<br></text>
-                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字<br></text>
+                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字<br><?php echo $error?></text>
                 <form action = "index.php" method="post">
                     <input type="text" class="comment-text" maxlength="50" name ="comment">
                     <input type="submit" class="comment-button" value= "送信">
