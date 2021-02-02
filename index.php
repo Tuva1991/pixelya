@@ -1,14 +1,14 @@
 <?php
     $fp = fopen("comment.txt", "r");
     $string = fgets($fp);
-    $error = null;
+    $error = 　;
     if(isset($_POST['comment']))
     {
         $comment = $_POST['comment'];
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         if(ctype_space($comment))
         {
-        $error = "エラー：空白文字以外を入力してください。<br>";
+            $error = "エラー：空白文字以外を入力してください。<br>";
         }
         else
         {
