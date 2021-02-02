@@ -50,7 +50,7 @@
         </div>
         <div class="tab-below-space">
         <div class="tab-below-space-cover"></div>
-            <div style=" top: 160px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
+            <div style=" top: 400px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: left; width: 50% ;">
                     ここは利用者さんの投稿したドット絵を乗せています。<br>
@@ -60,20 +60,21 @@
                     可能性があるため、自分のデータを手元に<br>
                     持っておくことを強く推奨します。
                 </p>
-                <div>
-                    <text class="form-title">ドット絵投稿機能<br></text>
-                    <text class="form_subtitle">不適切なドット絵、spam、<br>大きすぎるサイズのファイルアップロード等は控えてください。<br><?php echo $error?></text>
+                <div class="form">
+                    <text class="form-title" style=""><br><br>ドット絵投稿機能<br></text>
+                    <text class="form_subtitle">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
-                        <p>ファイル選択</p>
+                        <p class="form-description">ファイル選択</p>
                         <input type="file">
-                        <p>投稿者名</p>
-                        <input type="text">
-                        <p>作品名</p>
-                        <input type="text">
-                        <p>説明</p>
-                        <input type="text">
-                        <p>パスワード</p>
-                        <input type="text">
+                        <p class="form-description">投稿者名</p>
+                        <input type="text" class="form-text">
+                        <p class="form-description">作品名</p>
+                        <input type="text" class="form-text">
+                        <p class="form-description">説明</p>
+                        <input type="text" class="form-text">
+                        <p class="form-description">パスワード</p>
+                        <input type="text" class="form-text">
+                        <input type="button" class="form_button">
                     </form>
                 </div>
                 <ul class="image-ul" style="position: relative; bottom: 400px;">
