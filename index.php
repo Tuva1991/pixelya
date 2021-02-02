@@ -4,32 +4,35 @@
     $error = "　";
     if(isset($_POST['comment']))
     {
-        $comment = $_POST['comment'];
-        $name = $_POST['name'];
-        $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-        $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-        if($name == "")
+        if(isset($_POST['name']))
         {
-            $error = "エラー：名前が入力されていません！<br>";
-        }
-        else
-        {
-            if($comment == "")
+            $comment = $_POST['comment'];
+            $name = $_POST['name'];
+            $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
+            $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+            if($name == "")
             {
-                $error = "エラー：文章が入力されていません！<br>";
+                $error = "エラー：名前が入力されていません！<br>";
             }
             else
             {
-                $error = null;
-                $link = 'comment.txt';
-                $br = "<br>";
-                date_default_timezone_set('Asia/Tokyo');
-                $today = date("Y-m-d H:i:s");
-                $string = "日本時間".$today.$br."投稿者：".$name.$br.$comment.$br.$br.$string;
-                fclose($fp);
-                $fp = null;
-                file_put_contents($link, $string);
-                header('Location: https://lit-fortress-24137.herokuapp.com');
+                if($comment == "")
+                {
+                    $error = "エラー：文章が入力されていません！<br>";
+                }
+                else
+                {
+                    $error = null;
+                    $link = 'comment.txt';
+                    $br = "<br>";
+                    date_default_timezone_set('Asia/Tokyo');
+                    $today = date("Y-m-d H:i:s");
+                    $string = "日本時間".$today.$br."投稿者：".$name.$br.$comment.$br.$br.$string;
+                    fclose($fp);
+                    $fp = null;
+                    file_put_contents($link, $string);
+                    header('Location: https://lit-fortress-24137.herokuapp.com');
+                }
             }
         }
     }
