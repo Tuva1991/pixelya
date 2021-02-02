@@ -1,7 +1,7 @@
 <?php
     $fp = fopen("comment.txt", "r");
     $string = fgets($fp);
-    $error = "test";
+    $error = "　";
     if(isset($_POST['comment']))
     {
         $comment = $_POST['comment'];
