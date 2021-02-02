@@ -1,15 +1,15 @@
 <?php
     $fp = fopen("comment.txt", "r");
-    $string = fgets($fp);
-    $error = "　";
+    $string = fgets($fp);//コメント読み込み
+    $error = null;
     if(isset($_POST['comment']))
     {
-        if(isset($_POST['name']))
+        if(isset($_POST['name']))//ここ && でも良かったかもしれない()
         {
             $comment = $_POST['comment'];
             $name = $_POST['name'];
             $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-            $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+            $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//コメント 表示名の取得と脆弱性の除去
             if($name == "")
             {
                 $error = "エラー：名前が入力されていません！<br>";
@@ -22,16 +22,16 @@
                 }
                 else
                 {
-                    $error = null;
-                    $link = 'comment.txt';
-                    $br = "<br>";
-                    date_default_timezone_set('Asia/Tokyo');
-                    $today = date("Y-m-d H:i:s");
-                    $string = "日本時間".$today.$br."投稿者：".$name.$br.$comment.$br.$br.$string;
+                    $error = null;//おそらく深い意味はない
+                    $link = 'comment.txt';//リンク設定
+                    $br = "<br>";//特に深い意味はない
+                    date_default_timezone_set('Asia/Tokyo');//ここから
+                    $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+                    $string = "日本時間".$today.$br."投稿者：".$name.$br.$comment.$br.$br.$string;//表示メッセージの作成
                     fclose($fp);
                     $fp = null;
-                    file_put_contents($link, $string);
-                    header('Location: https://lit-fortress-24137.herokuapp.com');
+                    file_put_contents($link, $string);//上書きして完成
+                    header('Location: https://lit-fortress-24137.herokuapp.com');//これは多重投稿防止用のヘッダー
                 }
             }
         }
