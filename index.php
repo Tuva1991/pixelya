@@ -25,7 +25,7 @@
                 $br = "<br>";
                 date_default_timezone_set('Asia/Tokyo');
                 $today = date("Y-m-d H:i:s");
-                $string = "日本時間".$today.$br.$comment.$br.$br.$string;
+                $string = "日本時間".$today.$br."投稿者：".$name.$br.$comment.$br.$br.$string;
                 fclose($fp);
                 $fp = null;
                 file_put_contents($link, $string);
