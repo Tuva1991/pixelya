@@ -8,10 +8,6 @@
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
         if(ctype_space($comment))
         {
-            $error = "エラー：空白文字以外を入力してください。<br>";
-        }
-        else
-        {
             $link = 'comment.txt';
             $br = "<br>";
             date_default_timezone_set('Asia/Tokyo');
@@ -21,6 +17,9 @@
             $fp = null;
             file_put_contents($link, $string);
             header('Location: https://lit-fortress-24137.herokuapp.com');
+        }
+        {
+        $error = "エラー：空白文字以外を入力してください。<br>";
         }
     }
     ?>
