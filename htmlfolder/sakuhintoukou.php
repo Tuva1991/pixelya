@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,6 +20,7 @@
                 <li><a href="shinchakuosusume.html">新着おすすめ</a></li>
                 <li><a href="sakushaosusume.html">作者からのおすすめ</a></li>
                 <li><b>閲覧数の多いおすすめ</b></li>
+                <li><a href="htmlfolder/sakuhintoukou.php">[投稿]</a></li>
             </ul>
         </li>
         <li><a href="riyoukiyaku.html">[利用規約]</a></li>
@@ -43,23 +47,38 @@
                 </p>
             </div>
         </div>
+        </div>
         <div class="tab-below-space">
         <div class="tab-below-space-cover"></div>
             <div style=" top: 160px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
-                <p style="text-align: center; width: 50% ;">
-                    ここは利用者さんの投稿したドット絵を乗っけています。<br>
+                <p style="text-align: left; width: 50% ;">
+                    ここは利用者さんの投稿したドット絵を乗せています。<br>
                     はっきり言ってログイン機能とか作ってないので、<br>
                     spamとかされたらひとたまりもありません。<br>
                     管理者のヒューマンエラーでデータが失われる<br>
                     可能性があるため、自分のデータを手元に<br>
                     持っておくことを強く推奨します。
                 </p>
+                <div>
+                    <text class="form-title">ドット絵投稿機能<br></text>
+                    <text class="form_subtitle">不適切なドット絵、spam、<br>大きすぎるサイズのファイルアップロード等は控えてください。<br><?php echo $error?></text>
+                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
+                        <p>ファイル選択</p>
+                        <input type="file">
+                        <p>投稿者名</p>
+                        <input type="text">
+                        <p>作品名</p>
+                        <input type="text">
+                        <p>説明</p>
+                        <input type="text">
+                        <p>パスワード</p>
+                        <input type="text">
+                    </form>
+                </div>
                 <ul class="image-ul" style="position: relative; bottom: 400px;">
-            
                 </ul>
             </div>
-        </div>
     </div>
     <?php
     ?>
