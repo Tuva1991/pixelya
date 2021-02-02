@@ -310,10 +310,10 @@ body
 }
 .comment-button
 {
+  font-family: 'pixel';
   font-size: 24px;
   position: relative;
   left: 24px;
-  top: 410px;
 }
 .comment-list
 {
@@ -326,12 +326,11 @@ body
 }
 .comment-description
 {
-  font-family: 'pixel';
+  font-family: 'pixel-bold';
   font-size: 24px;
-  color: black;
+  color: white;
   position: relative;
   left: 24px;
-  top: 410px;
 }
 .name-text
 {
@@ -340,7 +339,6 @@ body
   color: black;
   position: relative;
   left: 24px;
-  top: 410px;
 }
 .name-description
 {
@@ -349,5 +347,5 @@ body
   color: black;
   position: relative;
   left: 24px;
-  top: 410px;
+
 }
