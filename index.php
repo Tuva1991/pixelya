@@ -13,7 +13,7 @@
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
-        //header('Location: ./');
+        header('Location: ./');
     }
     ?>
 <!DOCTYPE html>
