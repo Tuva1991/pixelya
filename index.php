@@ -5,23 +5,32 @@
     if(isset($_POST['comment']))
     {
         $comment = $_POST['comment'];
+        $name = $_POST['name'];
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-        if($comment == "")
+        $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+        if($name == "")
         {
-            $error = "エラー：空白以外を入力してください。<br>";
+            $error = "エラー：名前が入力されていません！<br>";
         }
         else
         {
-            $error = null;
-            $link = 'comment.txt';
-            $br = "<br>";
-            date_default_timezone_set('Asia/Tokyo');
-            $today = date("Y-m-d H:i:s");
-            $string = "日本時間".$today.$br.$comment.$br.$br.$string;
-            fclose($fp);
-            $fp = null;
-            file_put_contents($link, $string);
-            header('Location: https://lit-fortress-24137.herokuapp.com');
+            if($comment == "")
+            {
+                $error = "エラー：文章が入力されていません！<br>";
+            }
+            else
+            {
+                $error = null;
+                $link = 'comment.txt';
+                $br = "<br>";
+                date_default_timezone_set('Asia/Tokyo');
+                $today = date("Y-m-d H:i:s");
+                $string = "日本時間".$today.$br.$comment.$br.$br.$string;
+                fclose($fp);
+                $fp = null;
+                file_put_contents($link, $string);
+                header('Location: https://lit-fortress-24137.herokuapp.com');
+            }
         }
     }
     ?>
@@ -164,8 +173,11 @@
             </ul>
             <div　class="comment"><!-- コメント機能 -->
                 <text class="comment-title">コメント機能<br></text>
-                <text class="comment-subtitle">不適切なコメントは控えてください。<br>制限最大50文字<br><?php echo $error?></text>
-                <form action = "index.php" method="post">
+                <text class="comment-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
+                <form action = "index.php" method="post"> 
+                    <text class="comment-subtitle">名前（最大30文字）<br>
+                    <input type="text" class="comment-text" maxlength="30" name ="name"><br>
+                    <text class="comment-subtitle">コメント（最大50文字）<br>
                     <input type="text" class="comment-text" maxlength="50" name ="comment">
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
