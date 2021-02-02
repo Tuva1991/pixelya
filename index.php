@@ -1,5 +1,6 @@
 <?php
     $fp = fopen("comment.txt", "r");
+    $string = fgets($fp);
     if(isset($_POST['comment']))
     {
         $comment = $_POST['comment'];
@@ -8,7 +9,6 @@
         $br = "<br>";
         date_default_timezone_set('Asia/Tokyo');
         $today = date("Y-m-d H:i:s");
-        $string = fgets($fp);
         $string = "日本時間".$today.$br.$comment.$br.$br.$string;
         fclose($fp);
         $fp = null;
