@@ -175,9 +175,9 @@
                 <text class="comment-title">コメント機能<br></text>
                 <text class="comment-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
                 <form action = "index.php" method="post"> 
-                    <text class="comment-subtitle">名前（最大30文字）<br>
-                    <input type="text" class="comment-text" maxlength="30" name ="name"><br>
-                    <text class="comment-subtitle">コメント（最大50文字）<br>
+                    <text class="name-description">名前（最大30文字）<br>
+                    <input type="text" class="name-text" maxlength="30" name ="name">
+                    <text class="comment-description"><br>コメント（最大50文字）<br>
                     <input type="text" class="comment-text" maxlength="50" name ="comment">
                     <input type="submit" class="comment-button" value= "送信">
                 </form>
