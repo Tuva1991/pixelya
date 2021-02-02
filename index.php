@@ -6,9 +6,9 @@
     {
         $comment = $_POST['comment'];
         $comment = htmlspecialchars($comment, ENT_QUOTES, 'UTF-8');
-        if(ctype_space($comment))
+        if($comment == "")
         {
-            $error = "エラー：空白文字以外を入力してください。<br>";
+            $error = "エラー：空白以外を入力してください。<br>";
         }
         else
         {
