@@ -13,7 +13,7 @@
         fclose($fp);
         $fp = null;
         file_put_contents($link, $string);
-        header('Location: ./');
+        header('Location: https://lit-fortress-24137.herokuapp.com');
     }
     ?>
 <!DOCTYPE html>
