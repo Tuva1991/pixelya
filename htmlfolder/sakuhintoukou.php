@@ -8,11 +8,11 @@
     $file = $_POST['file'];
     $name = $_POST['name'];
     $image_name = $_POST['image-name'];
-    $discription = $_POST['discription'];
+    $description = $_POST['description'];
     $password = $_POST['password'];
-    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
-    $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
+    $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
     //if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
     //{
@@ -20,7 +20,7 @@
     //}
     //else
     {
-        //if($file == null && $image_name == "" && $discription == "" && $password == "")
+        //if($file == null && $image_name == "" && $description == "" && $password == "")
         //{
         //    $error = $error."エラー：記入漏れがあります！<br>";
         //}
@@ -113,7 +113,7 @@
                 <div class="form" style="top: 0px; left: 0px;">
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
-                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
+                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
                         <label for="label_image"><input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;" accept="image/png"></label>
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
