@@ -116,7 +116,7 @@ if(isset($_POST['name']))
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
                         <input type="text" class="form-text"　maxlength="30" name="image-name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大50文字)</p>
-                        <p type="text" class="form-text" maxlength="50" name="description"  style="height: 240px; top: 0px; left: 0px;"></p> <!--ここ本当は textareaにしたかったけれども後々いろいろ問題が出てきたので<p>になっています。-->
+                        <p type="text" class="form-text" maxlength="50" name="description"  style="top: 0px; left: 0px;"></p> <!--ここ本当は textareaにしたかったけれども後々いろいろ問題が出てきたので<p>になっています。-->
                         <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
                         <input type="text" class="form-text" maxlength="30" name="password"  style="top: 0px; left: 0px;">
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
