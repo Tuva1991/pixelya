@@ -27,7 +27,7 @@
         //else
         {
             //$info = pathinfo( $file, PATHINFO_EXTENSION);
-            $image_id = uniqid().'png';//ファイル名をユニーク化
+            //$image_id = uniqid().'png';//ファイル名をユニーク化
             // $file = "images/$image";
             // $sql = "INSERT INTO images(name) VALUES (:image)";
             // $stmt = $dbh->prepare($sql);
