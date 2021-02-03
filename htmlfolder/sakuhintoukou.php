@@ -1,45 +1,45 @@
 <?php
 //PW 49B507D1CCFE8BE6 16進数の乱数
-  $fp = fopen("imagedate.txt", "r");
-  $string = fgets($fp);//読み込み
-  $error = null;
-  if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
-  {
-    $file = $_POST['file'];
-    $name = $_POST['name'];
-    $image_name = $_POST['image-name'];
-    $discription = $_POST['discription'];
-    $password = $_POST['password'];
-    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
-    $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
-    $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
-    $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
-    if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
-    {
-        $error = "エラー：名前が入力されていません！<br>";
-    }
-    else
-    {
-        if($file == null && $imagename == "" && $discription == "" && $password == "")
-        {
-            $error = $error."エラー：記入漏れがあります！<br>";
-        }
-        else
-        {
-            $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
-            $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
-            $link = 'file.txt';//リンク設定    
-            date_default_timezone_set('Asia/Tokyo');//ここから
-            $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-            $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
-            //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-            fclose($fp);
-            $fp = null;
-            file_put_contents($link, $string);//上書きして完成
-            header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
-        }
-    }
-  }
+//   $fp = fopen("imagedate.txt", "r");
+//   $string = fgets($fp);//読み込み
+//   $error = null;
+//   if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
+//   {
+//     $file = $_POST['file'];
+//     $name = $_POST['name'];
+//     $image_name = $_POST['image-name'];
+//     $discription = $_POST['discription'];
+//     $password = $_POST['password'];
+//     $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+//     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
+//     $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
+//     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
+//     if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
+//     {
+//         $error = "エラー：名前が入力されていません！<br>";
+//     }
+//     else
+//     {
+//         if($file == null && $imagename == "" && $discription == "" && $password == "")
+//         {
+//             $error = $error."エラー：記入漏れがあります！<br>";
+//         }
+//         else
+//         {
+//             $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
+//             $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
+//             $link = 'file.txt';//リンク設定    
+//             date_default_timezone_set('Asia/Tokyo');//ここから
+//             $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+//             $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
+//             //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+//             fclose($fp);
+//             $fp = null;
+//             file_put_contents($link, $string);//上書きして完成
+//             header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+//         }
+//     }
+//   }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
