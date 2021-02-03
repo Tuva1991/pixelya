@@ -122,7 +122,7 @@ if(isset($_POST['name']))
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
                     </form>
                 </div>
-                <ul class="image-ul" style="position: relative;">
+                <ul class="image-ul" style="position: relative; top: -500px;">
                     <?php echo $string;?>
                 </ul>
             </div>
