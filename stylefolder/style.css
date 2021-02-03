@@ -307,6 +307,7 @@ body
   position: relative;
   left: 24px;
   top: 410px;
+  width: 720px;
 }
 .form-button
 {
@@ -326,7 +327,6 @@ body
   left: 24px;
   top: 410px;
   color: white;
-  width: 720px;
 }
 .form-description
 {
