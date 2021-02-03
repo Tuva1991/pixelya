@@ -3,7 +3,7 @@
 $fp = fopen("file.txt", "r");
 $string = fgets($fp);//読み込み
 $error = null;
-if(isset($_POST['file']))
+if(isset($_POST['name']))
 {
     //$file = $_POST['file'];
     $name = $_POST['name'];
