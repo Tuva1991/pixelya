@@ -20,7 +20,7 @@ if(isset($_POST['name']))
     }
     else
     {
-        if($file == "" && $image_name == "" && $description == "" && $password == "")//記入漏れがないかチェック
+        if(!empty($file) && $image_name == "" && $description == "" && $password == "")//記入漏れがないかチェック
         {
            $error = $error."エラー：記入漏れがあります！<br>";
         }
@@ -35,7 +35,7 @@ if(isset($_POST['name']))
                     $link = 'file.txt';//リンク設定    
                     date_default_timezone_set('Asia/Tokyo');//ここから
                     $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明"."<textarea>".$description."</textarea>"."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
+                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
                     //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
                     fclose($fp);
                     $fp = null;
@@ -115,8 +115,8 @@ if(isset($_POST['name']))
                         <input type="text" class="form-text" maxlength="30" name="name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
                         <input type="text" class="form-text"　maxlength="30" name="image-name" style="top: 0px; left: 0px;">
-                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大300文字)</p>
-                        <textarea rows="10" type="text" class="form-text" maxlength="300" name="description"  style="height: 240px; top: 0px; left: 0px;"></textarea>
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大50文字)</p>
+                        <p type="text" class="form-text" maxlength="50" name="description"  style="height: 240px; top: 0px; left: 0px;"></p> <!--ここ本当は textareaにしたかったけれども後々いろいろ問題が出てきたので<p>になっています。-->
                         <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
                         <input type="text" class="form-text" maxlength="30" name="password"  style="top: 0px; left: 0px;">
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
