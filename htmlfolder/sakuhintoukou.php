@@ -100,7 +100,7 @@
                     可能性があるため、自分のデータを手元に<br>
                     持っておくことを強く推奨します。
                 </p>
-                <div class="form" >
+                <div class="form" style="top: 0px; left: 0px;">
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
@@ -111,7 +111,7 @@
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
                         <input type="text" class="form-text"　maxlength="30" name="image-name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大100文字)</p>
-                        <input rows="10" type="text" class="form-text" maxlength="100" name="description"  style="top: 0px; left: 0px;">
+                        <input rows="10" type="text" class="form-text" maxlength="100" name="description"  style="height: 240px;top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
                         <input type="text" class="form-text" maxlength="30" name="password"  style="top: 0px; left: 0px;">
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
