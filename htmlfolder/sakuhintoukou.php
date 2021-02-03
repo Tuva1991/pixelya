@@ -5,7 +5,7 @@ $string = fgets($fp);//読み込み
 $error = null;
 if(isset($_POST['name']))
 {
-    //$file = $_POST['file'];
+    $file = $_POST['file'];
     $name = $_POST['name'];
     $image_name = $_POST['image-name'];
     $description = $_POST['description'];
