@@ -277,13 +277,13 @@ body
   position: relative;
   top: -300;
 }
-.comment
+.form
 {
   position: relative;
   left: 24px;
   top: 400px;
 }
-.comment-title
+.form-title
 {
   font-size: 40px;
   color: white;
@@ -291,7 +291,7 @@ body
   left: 24px;
   top: 400px;
 }
-.comment-subtitle
+.form-subtitle
 {
   font-size: 24px;
   color: white;
@@ -299,7 +299,7 @@ body
   left: 24px;
   top: 400px;
 }
-.comment-text
+.form-text
 {
   font-family: 'pixel';
   font-size: 24px;
@@ -308,7 +308,7 @@ body
   left: 24px;
   top: 410px;
 }
-.comment-button
+.form-button
 {
   font-family: 'pixel';
   font-size: 24px;
@@ -318,7 +318,7 @@ body
   top: 410px;
 
 }
-.comment-list
+.form-list
 {
   font-family: 'pixel';
   font-size: 24px;
@@ -327,7 +327,7 @@ body
   top: 410px;
   color: white;
 }
-.comment-description
+.form-description
 {
   font-family: 'pixel-b';
   font-size: 24px;
@@ -337,23 +337,7 @@ body
   left: 24px;
   top: 410px;
 }
-.name-text
+.form-file
 {
-  font-family: 'pixel';
-  font-size: 24px;
-  color: black;
-  position: relative;
-  left: 24px;
-  left: 24px;
-  top: 410px;
-}
-.name-description
-{
-  font-family: 'pixel-b';
-  font-size: 24px;
-  color: white;
-  position: relative;
-  left: 24px;
-  left: 24px;
-  top: 410px;
+  font-family: 'pixel';  
 }
