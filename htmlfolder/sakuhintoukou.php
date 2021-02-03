@@ -42,6 +42,10 @@ if(isset($_POST['name']))
                     file_put_contents($link, $string);//上書きして完成
                     header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
                 }
+                else
+                {
+                    $error = $error."エラー：パスワードが違います！<br>";
+                }
             }
         }
     }
