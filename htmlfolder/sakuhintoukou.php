@@ -1,45 +1,45 @@
 <?php
 //PW 49B507D1CCFE8BE6 16進数の乱数
-//   $fp = fopen("imagedate.txt", "r");
-//   $string = fgets($fp);//読み込み
-//   $error = null;
-//   if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
-//   {
-//     $file = $_POST['file'];
-//     $name = $_POST['name'];
-//     $image_name = $_POST['image-name'];
-//     $discription = $_POST['discription'];
-//     $password = $_POST['password'];
-//     $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
-//     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
-//     $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
-//     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
-//     if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
-//     {
-//         $error = "エラー：名前が入力されていません！<br>";
-//     }
-//     else
-//     {
-//         if($file == null && $imagename == "" && $discription == "" && $password == "")
-//         {
-//             $error = $error."エラー：記入漏れがあります！<br>";
-//         }
-//         else
-//         {
-//             $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
-//             $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
-//             $link = 'file.txt';//リンク設定    
-//             date_default_timezone_set('Asia/Tokyo');//ここから
-//             $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-//             $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
-//             //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-//             fclose($fp);
-//             $fp = null;
-//             file_put_contents($link, $string);//上書きして完成
-//             header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
-//         }
-//     }
-//   }
+  $fp = fopen("imagedate.txt", "r");
+  $string = fgets($fp);//読み込み
+  $error = null;
+  if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
+  {
+    $file = $_POST['file'];
+    $name = $_POST['name'];
+    $image_name = $_POST['image-name'];
+    $discription = $_POST['discription'];
+    $password = $_POST['password'];
+    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+    $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
+    $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
+    if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
+    {
+        $error = "エラー：名前が入力されていません！<br>";
+    }
+    else
+    {
+        if($file == null && $imagename == "" && $discription == "" && $password == "")
+        {
+            $error = $error."エラー：記入漏れがあります！<br>";
+        }
+        else
+        {
+            $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
+            $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
+            $link = 'file.txt';//リンク設定    
+            date_default_timezone_set('Asia/Tokyo');//ここから
+            $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+            $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
+            //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+            fclose($fp);
+            $fp = null;
+            file_put_contents($link, $string);//上書きして完成
+            header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+        }
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -60,11 +60,11 @@
                 <li><a href="shinchakuosusume.html">新着おすすめ</a></li>
                 <li><a href="sakushaosusume.html">作者からのおすすめ</a></li>
                 <li><b>閲覧数の多いおすすめ</b></li>
-                <li><a href="htmlfolder/sakuhintoukou.php">[投稿]</a></li>
             </ul>
         </li>
         <li><a href="riyoukiyaku.html">[利用規約]</a></li>
         <li><a href="sakushanokotoba.html">[作者の言葉]</a></li>
+        <li><b>[投稿]</b></li>
     </ul>
     <div class="sidebar">  <!--左にあるサイドバー-->
         <a class="sponsorlink">スポンサード リンク<br>※スポンサーがいるとは言っていない</a>
@@ -101,23 +101,23 @@
                     持っておくことを強く推奨します。
                 </p>
                 <div class="form">
-                    <text class="form-title" style=""><br><br>ドット絵投稿機能<br></text>
-                    <text class="form_subtitle">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
-                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
-                        <p class="form-description">ファイル選択</p>
-                        <input type="file" class="form-file" name="file">
-                        <p class="form-description">投稿者名（最大30文字）</p>
+                    <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
+                    <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
+                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
+                        <input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;">
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
                         <input type="text" class="form-text" maxlength="30" name="name">
-                        <p class="form-description">作品名（最大30文字）</p>
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
                         <input type="text" class="form-text"　maxlength="30" name="image-name">
-                        <p class="form-description">説明（最大100文字)</p>
-                        <input rows="10" type="text" class="form-text" maxlength="100" name="description">
-                        <p class="form-description">パスワード</p>
-                        <input type="text" class="form-text" maxlength="30" name="password">
-                        <input type="submit" class="form_button"　value="送信">
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大100文字)</p>
+                        <input rows="10" type="text" class="form-text" maxlength="100" name="description"  style="top: 0px; left: 0px;">
+                        <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
+                        <input type="text" class="form-text" maxlength="30" name="password"  style="top: 0px; left: 0px;">
+                        <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
                     </form>
                 </div>
-                <ul class="image-ul" style="position: relative; bottom: 400px;">
+                <ul class="image-ul" style="position: relative;">
                 </ul>
             </div>
     </div>
