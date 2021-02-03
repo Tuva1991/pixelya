@@ -9,7 +9,8 @@
   font-family: 'pixel';
   src: url("font/PixelMplus12-Regular.ttf");
   image-rendering: pixelated;
-}/*フォント関連*/
+}
+/*フォント関連*/
 body
 {
     font-family: 'pixel-b';
@@ -35,7 +36,8 @@ body
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-}/*ヘッダーとかがある一番上にある白い帯です*/
+}
+/*ヘッダーとかがある一番上にある白い帯です*/
 .logo
 {
   height:129px;
@@ -151,7 +153,8 @@ body
   position: absolute;
 }
 
-.sponsorlink/*スポンサーリンク(笑)*/
+.sponsorlink
+/*スポンサーリンク(笑)*/
 {
   top: 120px;
   font-size: 14px;
@@ -173,7 +176,8 @@ body
   width: 200px;
   display: table;
 }
-.matome/*これは 世界のドット絵とかの物*/
+.matome
+/*これは 世界のドット絵とかの物*/
 {
   display: block;
   width: 280px;
@@ -184,7 +188,8 @@ body
   z-index: 1;
   top: 400px;
 }
-.matome-text/*上記のものの中にある 世界のドット絵 とかの文字とかの設定 ここら辺は試行錯誤して作ったのでごちゃごちゃ*/
+.matome-text
+/*上記のものの中にある 世界のドット絵 とかの文字とかの設定 ここら辺は試行錯誤して作ったのでごちゃごちゃ*/
 {
   display: block;
   color: black;
@@ -201,11 +206,13 @@ body
   height: 0;
   top: 320px;
 }
-.relative /*多分使ってないけれど使っているところがあったら嫌だから残している物*/
+.relative
+/*多分使ってないけれど使っているところがあったら嫌だから残している物*/
 {
   position: relative;
 }
-.tab-below-space　/*タブよりしたのスペースです*/
+.tab-below-space
+/*タブよりしたのスペースです*/
 {
   z-index: -0;
   left: 340px;
@@ -215,7 +222,8 @@ body
   position: relative;
   bottom: 48px;
 }
-.tab-below-space-cover /*まとめの当たり判定バグ防止のものです*/
+.tab-below-space-cover
+/*まとめの当たり判定バグ防止のものです*/
 {
   z-index: 100;
   position: absolute;
@@ -223,13 +231,15 @@ body
   width: 1000px;
   height: 240px;
 }
-.matome-anchor　/*日本関連の旗まとめ の アンカータグに引っ付ける奴*/
+.matome-anchor
+/*日本関連の旗まとめ の アンカータグに引っ付ける奴*/
 {
   display: inline-block;
   width: 170px;
   height: 170px;
 }
-.image /* 日本関連の旗まとめ みたいな感じで画像を表示しているところのスタイル */
+.image
+/* 日本関連の旗まとめ みたいな感じで画像を表示しているところのスタイル */
 {
   display: block;
   position: relative;
@@ -239,7 +249,8 @@ body
   background-color: white;
   image-rendering: pixelated;
 }
-.image-text /*そのまんま 日本国旗 って書いてあるのとかこれ*/
+.image-text
+/*そのまんま 日本国旗 って書いてあるのとかこれ*/
 {
   display: block;
   position: relative;
@@ -249,13 +260,15 @@ body
   text-align: center;
   height: 40px;
 }
-.imageanchor /*前にあったものの亜種(*/
+.imageanchor
+/*前にあったものの亜種(*/
 {
   display: inline-block;
   position: relative;
   width: 170px;
 }
-.imagebase/*<div>で仕切られたimage のbase*/
+.imagebase
+/*<div>で仕切られたimage のbase*/
 {
   top: 400px;
   display: table-cell;
@@ -272,7 +285,8 @@ body
   top: 400px;
   left: 10px;
 }
-.image-ul/*ここら辺は　index.php のコメント用の formや sakuhintoukou.php関連のもの*/
+.image-ul
+/*ここら辺は　index.php のコメント用の formや sakuhintoukou.php関連のもの*/
 {
   position: relative;
   top: -300;
