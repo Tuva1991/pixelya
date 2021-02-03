@@ -28,24 +28,24 @@ if(isset($_POST['name']))
         {
             $info = pathinfo( $file, PATHINFO_EXTENSION);
             $image_id = uniqid().'png';//ファイル名をユニーク化
-            //$file = "images/$image";
-            //$sql = "INSERT INTO images(name) VALUES (:image)";
-            //$stmt = $dbh->prepare($sql);
-            //$stmt->bindValue(':image', $image, PDO::PARAM_STR); 
+            $file = "images/$image";
+            $sql = "INSERT INTO images(name) VALUES (:image)";
+            $stmt = $dbh->prepare($sql);
+            $stmt->bindValue(':image', $image, PDO::PARAM_STR); 
                 if($password == "49B507D1CCFE8BE6")
                 {
-                    move_uploaded_file($file['label_image']['tmp_name'], "images/".$image_id);
-//                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
-//                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
-//                     $link = 'file.txt';//リンク設定    
-//                     date_default_timezone_set('Asia/Tokyo');//ここから
-//                     $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-//                     $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$image_id.'.png">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
-//                     //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-//                     fclose($fp);
-//                     $fp = null;
-//                     file_put_contents($link, $string);//上書きして完成
-//                     header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+                    move_uploaded_file($_FILES['label_image']['tmp_name'], $image_id);
+                    $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
+                    $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
+                    $link = 'file.txt';//リンク設定    
+                    date_default_timezone_set('Asia/Tokyo');//ここから
+                    $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+                    $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$image_id.'.png">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
+                    //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+                    fclose($fp);
+                    $fp = null;
+                    file_put_contents($link, $string);//上書きして完成
+                    header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
                 }
             }
         }
