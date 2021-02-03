@@ -29,7 +29,7 @@ if(isset($_POST['name']))
             $image_id = uniqid().'.png';//ファイル名をユニーク化
                 if($password == "49B507D1CCFE8BE6")//パスワード認証
                 {
-                    move_uploaded_file($_FILE['file']['tmp_name'], "images/test.png");//画像を保存
+                    move_uploaded_file($file['file']['tmp_name'], "images/test.png");//画像を保存
                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
                     $link = 'file.txt';//リンク設定    
