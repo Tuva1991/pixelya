@@ -109,7 +109,7 @@ if(isset($_POST['name']))
                     可能性があるため、自分のデータを手元に<br>
                     持っておくことを強く推奨します。
                 </p>
-                <div class="form" style="top: 0px; left: 0px;">
+                <div class="form" style="top: 0px; left: 0px; z-index: 100;">
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
