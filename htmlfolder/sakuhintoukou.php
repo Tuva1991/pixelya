@@ -20,22 +20,22 @@ if(isset($_POST['name']))
     }
     else
     {
-        if($file == null && $image_name == "" && $description == "" && $password == "")
+        if($file == null && $image_name == "" && $description == "" && $password == "")//記入漏れがないかチェック
         {
            $error = $error."エラー：記入漏れがあります！<br>";
         }
         else
         {
-            $image_id = uniqid().'png';//ファイル名をユニーク化
-                if($password == "49B507D1CCFE8BE6")
+            $image_id = uniqid().'.png';//ファイル名をユニーク化
+                if($password == "49B507D1CCFE8BE6")//パスワード認証
                 {
-                    move_uploaded_file($_FILE['file']['tmp_name'], "images/test.png");
+                    move_uploaded_file($_FILE['file']['tmp_name'], "images/test.png");//画像を保存
                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
                     $link = 'file.txt';//リンク設定    
                     date_default_timezone_set('Asia/Tokyo');//ここから
                     $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-                    $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name."</p>".'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
+                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
                     //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
                     fclose($fp);
                     $fp = null;
