@@ -14,3 +14,5 @@ index.php world-matome.html flag.html japan-flag.php etsuransuuosusume.php sakuh
 最後の方時間がなくて実装できなかった機能がたくさんあったので、
 来年リベンジしたいです。
 ちなみにこのコードは大体 PHP 歴7日ぐらいで作りました。
+最初の方は cssのフォントの変更方法なども知らない かなり偏った
+技術でしたが、今回のコンテストでかなりのものを得ることができました。
