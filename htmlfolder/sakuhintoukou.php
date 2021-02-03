@@ -28,10 +28,10 @@ if(isset($_POST['name']))
         {
             $info = pathinfo( $file, PATHINFO_EXTENSION);
             $image_id = uniqid().'png';//ファイル名をユニーク化
-            $file = "images/$image";
-            $sql = "INSERT INTO images(name) VALUES (:image)";
-            $stmt = $dbh->prepare($sql);
-            $stmt->bindValue(':image', $image, PDO::PARAM_STR); 
+            //$file = "images/$image";
+            //$sql = "INSERT INTO images(name) VALUES (:image)";
+            //$stmt = $dbh->prepare($sql);
+            //$stmt->bindValue(':image', $image, PDO::PARAM_STR); 
 //                 if($password == "49B507D1CCFE8BE6")
 //                 {
 //                     move_uploaded_file($file['label_image']['tmp_name'], "/images".$image_id);
