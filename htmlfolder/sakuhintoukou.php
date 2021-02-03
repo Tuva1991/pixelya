@@ -111,7 +111,7 @@
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
                         <input type="text" class="form-text"　maxlength="30" name="image-name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大100文字)</p>
-                        <input rows="10" type="text" class="form-text" maxlength="100" name="description"  style="height: 240px;top: 0px; left: 0px;">
+                        <textarea rows="10" type="text" class="form-text" maxlength="100" name="description"  style="height: 240px;top: 0px; left: 0px;"></textarea>
                         <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
                         <input type="text" class="form-text" maxlength="30" name="password"  style="top: 0px; left: 0px;">
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
