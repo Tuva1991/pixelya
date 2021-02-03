@@ -34,7 +34,7 @@ if(isset($_POST['name']))
             $stmt->bindValue(':image', $image, PDO::PARAM_STR); 
                 if($password == "49B507D1CCFE8BE6")
                 {
-                    move_uploaded_file($_FILES['file']['tmp_name'], $image_id);
+                    move_uploaded_file($file['file']['tmp_name'], $image_id);
 //                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
 //                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
 //                     $link = 'file.txt';//リンク設定    
