@@ -1,54 +1,57 @@
 <?php
 //PW 49B507D1CCFE8BE6 16進数の乱数
-$fp = fopen("file.txt", "r");
-$string = fgets($fp);//読み込み
-$error = null;
-if(isset($_POST['name']))
-{
-    $file = $_POST['file'];
-    $name = $_POST['name'];
-    $image_name = $_POST['image-name'];
-    $description = $_POST['description'];
-    $password = $_POST['password'];
-    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
-    $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
-    $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
-    $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
-    if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
-    {
-       $error = "エラー：名前が入力されていません！<br>";
-    }
-    else
-    {
-        if(!empty($file) && $image_name == "" && $description == "" && $password == "")//記入漏れがないかチェック
-        {
-           $error = $error."エラー：記入漏れがあります！<br>";
-        }
-        else
-        {
-            $image_id = uniqid().'.png';//ファイル名をユニーク化
-                if($password == "49B507D1CCFE8BE6")//パスワード認証
-                {
-                    move_uploaded_file($_FILES['file']['tmp_name'], "images/".$image_id."png");//画像を保存
-                    $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
-                    $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
-                    $link = 'file.txt';//リンク設定    
-                    date_default_timezone_set('Asia/Tokyo');//ここから
-                    $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
-                    //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-                    fclose($fp);
-                    $fp = null;
-                    file_put_contents($link, $string);//上書きして完成
-                    header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
-                }
-                else
-                {
-                    $error = $error."エラー：パスワードが違います！<br>";
-                }
-            }
-        }
-    }
+// $fp = fopen("file.txt", "r");
+// $string = fgets($fp);//読み込み
+// $error = null;
+// if(isset($_POST['name']))
+// {
+//     $file = $_POST['file'];
+//     $name = $_POST['name'];
+//     $image_name = $_POST['image-name'];
+//     $description = $_POST['description'];
+//     $password = $_POST['password'];
+//     $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+//     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
+//     $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
+//     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
+//     if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
+//     {
+//        $error = "エラー：名前が入力されていません！<br>";
+//     }
+//     else
+//     {
+//         if(!empty($file) && $image_name == "" && $description == "" && $password == "")//記入漏れがないかチェック
+//         {
+//            $error = $error."エラー：記入漏れがあります！<br>";
+//         }
+//         else
+//         {
+//             $image_id = uniqid().'.png';//ファイル名をユニーク化
+//                 if($password == "49B507D1CCFE8BE6")//パスワード認証
+//                 {
+//                     move_uploaded_file($_FILES['file']['tmp_name'], "images/".$image_id."png");//画像を保存
+//                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
+//                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
+//                     $link = 'file.txt';//リンク設定    
+//                     date_default_timezone_set('Asia/Tokyo');//ここから
+//                     $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+//                     $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
+//                     //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+//                     fclose($fp);
+//                     $fp = null;
+//                     file_put_contents($link, $string);//上書きして完成
+//                     header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+//                 }
+//                 else
+//                 {
+//                     $error = $error."エラー：パスワードが違います！<br>";
+//                 }
+//             }
+//         }
+//     }
+//結局
+//move_uploaded_file($_FILES['file']['tmp_name'], "images/".$image_id."png");//画像を保存
+//のところでうまくいかず 時間がギリギリになってしまったため、断念しました、無念...
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -102,14 +105,17 @@ if(isset($_POST['name']))
             <div style=" top: 400px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: left; width: 50% ;">
-                    ここは利用者さんの投稿したドット絵を乗せています。<br>
+                    ここは利用者さんの投稿したドット絵を載せる予定だった<br>
+                    制作中のものを一応配置しています。<br>
+                    phpのプログラムは全て無効化してあります。
+                    <!-- ここは利用者さんの投稿したドット絵を乗せています。<br>
                     はっきり言ってログイン機能とか作ってないので、<br>
                     spamとかされたらひとたまりもありません。<br>
                     管理者のヒューマンエラーでデータが失われる<br>
                     可能性があるため、自分のデータを手元に<br>
-                    持っておくことを強く推奨します。
+                    持っておくことを強く推奨します。< -->
                 </p>
-                <div class="form" style="top: 0px; left: 0px; z-index: 100;">
+                <div class="form" style="top: 0px; left: 0px; z-index: 100;"> <!--見ての通りformで送っています。 style="" でごちゃごちゃしているのは index.php でも使った styleを流用しているため、それの調整です。-->
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
