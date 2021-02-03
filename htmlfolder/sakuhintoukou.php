@@ -32,14 +32,14 @@
 //             date_default_timezone_set('Asia/Tokyo');//ここから
 //             $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
 //             $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
-            //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-//            fclose($fp);
-//            $fp = null;
-//            file_put_contents($link, $string);//上書きして完成
-//            header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
-//        }
-//    }
-//  }
+//             //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+//             fclose($fp);
+//             $fp = null;
+//             file_put_contents($link, $string);//上書きして完成
+//             header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+//         }
+//     }
+//   }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -100,16 +100,16 @@
                     可能性があるため、自分のデータを手元に<br>
                     持っておくことを強く推奨します。
                 </p>
-                <div class="form">
+                <div class="form" >
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
                         <input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
-                        <input type="text" class="form-text" maxlength="30" name="name">
+                        <input type="text" class="form-text" maxlength="30" name="name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
-                        <input type="text" class="form-text"　maxlength="30" name="image-name">
+                        <input type="text" class="form-text"　maxlength="30" name="image-name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">説明（最大100文字)</p>
                         <input rows="10" type="text" class="form-text" maxlength="100" name="description"  style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;">パスワード</p>
