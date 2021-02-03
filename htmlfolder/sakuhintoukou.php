@@ -105,7 +105,9 @@
             <div style=" top: 400px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
                 <p style="text-align: left; width: 50% ;">
-                    ここは利用者さんの投稿したドット絵を載せる予定だった<br>
+                    ここは利用者さんの投稿したドット絵を載せる<br>
+                    予定だったけれども時間がなくて<br>
+                    完成できなかった<br>
                     制作中のものを一応配置しています。<br>
                     phpのプログラムは全て無効化してあります。
                     <!-- ここは利用者さんの投稿したドット絵を乗せています。<br>
