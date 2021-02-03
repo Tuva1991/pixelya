@@ -1,6 +1,6 @@
 <?php
 //PW 49B507D1CCFE8BE6 16進数の乱数
-  $fp = fopen("imagedate.txt", "r");
+  $fp = fopen("file.txt", "r");
   $string = fgets($fp);//読み込み
   $error = null;
   if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
