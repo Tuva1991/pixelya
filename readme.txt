@@ -2,9 +2,12 @@
 特書くこともないですが、
 別に高度なプログラムなんて書かれてませんので、
 多くの人が読めると思われます。
-現在実装できそうな機能
-・投稿機能とか
+実装したかった機能
+・ドット絵投稿機能
+・新着のおすすめ
 現在実装済みの機能
 ・検索機能
 ・閲覧数おすすめ
 ・コメント機能
+index.php world-matome.html flag.html japan-flag.php etsuransuuosusume.php sakuhintoukou.php search.js style.css
+にコメントが書かれています。 
