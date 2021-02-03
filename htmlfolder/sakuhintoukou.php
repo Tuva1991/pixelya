@@ -1,10 +1,10 @@
 <?php
 //PW 49B507D1CCFE8BE6 16進数の乱数
-  $fp = fopen("file.txt", "r");
-  $string = fgets($fp);//読み込み
-  $error = null;
-  if(isset($_POST['file']))
-  {
+//$fp = fopen("file.txt", "r");
+$string = fgets($fp);//読み込み
+$error = null;
+if(isset($_POST['file']))
+{
     $file = $_POST['file'];
     $name = $_POST['name'];
     $image_name = $_POST['image-name'];
