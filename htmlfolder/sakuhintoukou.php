@@ -3,7 +3,7 @@
   $fp = fopen("file.txt", "r");
   $string = fgets($fp);//読み込み
   $error = null;
-  if(isset($_POST['file']) && isset($_POST['name']) && isset($_POST['image-name']) && isset($_POST['description']) && isset($_POST['password']))
+  if(isset($_POST['file']))
   {
     $file = $_POST['file'];
     $name = $_POST['name'];
@@ -26,17 +26,34 @@
         }
         else
         {
-            $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
-            $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
-            $link = 'file.txt';//リンク設定    
-            date_default_timezone_set('Asia/Tokyo');//ここから
-            $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-            $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$file.'">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
-            //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
-            fclose($fp);
-            $fp = null;
-            file_put_contents($link, $string);//上書きして完成
-            header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+            //$info = pathinfo( $file, PATHINFO_EXTENSION);
+            $image_id = uniqid().'png';//ファイル名をユニーク化
+            $image .= '.' . substr(strrchr($_FILES['image']['name'], '.'), 1);//アップロードされたファイルの拡張子を取得
+            $file = "images/$image";
+            $sql = "INSERT INTO images(name) VALUES (:image)";
+            $stmt = $dbh->prepare($sql);
+            $stmt->bindValue(':image', $image, PDO::PARAM_STR);
+            if (!empty($_FILES['image']['name'])) 
+            {//ファイルが選択されていれば$imageにファイル名を代入
+                if (exif_imagetype($file))//画像ファイルかのチェック
+                {
+                    if(password == "49B507D1CCFE8BE6")
+                    {
+                        move_uploaded_file($_FILES['label_image']['tmp_name'], "".$file_id);
+                        $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
+                        $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
+                        $link = 'file.txt';//リンク設定    
+                        date_default_timezone_set('Asia/Tokyo');//ここから
+                        $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
+                        $string = '<li  style="display: inline-block;">'.'<div class="imagebase">'.'<image calss="'.$image_id.'.png">'.'<p class="image-txt">'."日本時間".$today.$br."投稿者：".$name.$br.$file.$br.$br.$string."</p>"."</div>"."</li>";
+                        //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
+                        fclose($fp);
+                        $fp = null;
+                        file_put_contents($link, $string);//上書きして完成
+                        header('Location: https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php');//これは多重投稿防止用のヘッダー
+                    }
+                }
+            }
         }
     }
   }
@@ -104,8 +121,8 @@
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
-                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
-                        <input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;">
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;" accept="image/png">ファイル選択</p>
+                        <label for="label_image"><input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
                         <input type="text" class="form-text" maxlength="30" name="name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
