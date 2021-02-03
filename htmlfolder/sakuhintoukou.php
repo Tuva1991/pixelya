@@ -5,15 +5,15 @@ $string = fgets($fp);//読み込み
 $error = null;
 if(isset($_POST['file']))
 {
-    $file = $_POST['file'];
+    //$file = $_POST['file'];
     $name = $_POST['name'];
     $image_name = $_POST['image-name'];
     $description = $_POST['description'];
     $password = $_POST['password'];
-//     $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
-//     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
-//     $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
-//     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
+    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+    $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
+    $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
     //if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
     //{
     //    $error = "エラー：名前が入力されていません！<br>";
