@@ -10,7 +10,7 @@
     $image_name = $_POST['image-name'];
     $discription = $_POST['discription'];
     $password = $_POST['password'];
-    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
+    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');//諸々取得と脆弱性の除去
     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
     $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
