@@ -121,8 +121,8 @@
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post"  style="top: 0px; left: 0px;">
-                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;" accept="image/png">ファイル選択</p>
-                        <label for="label_image"><input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;">
+                        <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
+                        <label for="label_image"><input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;" accept="image/png">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
                         <input type="text" class="form-text" maxlength="30" name="name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
