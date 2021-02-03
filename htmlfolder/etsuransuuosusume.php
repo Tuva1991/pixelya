@@ -47,11 +47,10 @@
         <div class="tab-below-space-cover"></div>
             <div style=" top: 160px; position: relative; z-index: 1000; color: white; font-size: 20px; left: 20px;">
                 <h1 style="background-color: beige; width: 50%; text-align: center; color:#0e0e21;;">このページの説明</h1>
-                <p style="text-align: left; width: 50% ;">
+                <p style="text-align: center; width: 50% ;">
                     ここは閲覧数によるおすすめを乗っけています。<br>
                     はっきり言ってIPアドレスとかで直近の訪問者とか<br>
-                    記録してないので、F5押せば閲覧数が増える
-                    ガバガバです。<br>
+                    記録してないので、F5押せば閲覧数が増えるガバガバです。<br>
                     不定期の更新でリセットされます。
                 </p>
                 <ul class="image-ul" style="position: relative; bottom: 400px;">
@@ -147,6 +146,7 @@
         </div>
     </div>
     <?php
+    //これらの内容としては linkゲットして javascript に送って記録して ソートして 並び替えるという 登録がすごいめんどくさそうな機構
     $link = 'https://lit-fortress-24137.herokuapp.com/htmlfolder/matomefolder/world-matome-folder/flag/counter-japan-flag.txt';
     $fp = fopen($link, "r");
     $japan_flag = fgets($fp);
