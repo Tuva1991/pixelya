@@ -35,7 +35,7 @@ if(isset($_POST['name']))
                     $link = 'file.txt';//リンク設定    
                     date_default_timezone_set('Asia/Tokyo');//ここから
                     $today = date("Y-m-d H:i:s");//ここまで投稿時間の設定
-                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 500px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
+                    $string = '<li  style="display: inline-block;">'.'<p class="image-txt" style="position: relative; top: 400px;">'."日本時間".$today.$br."投稿者：".$name.$br."説明".$description."</p>".'<div class="imagebase">'.'<image class="image" src="'.$image_id.'"></image>'."</div>"."</li>".$string;
                     //表示画像や名前、説明の作成 html のコードを強引にそのまま作っちゃっています。
                     fclose($fp);
                     $fp = null;
@@ -122,7 +122,7 @@ if(isset($_POST['name']))
                         <input type="submit" class="form_button"　value="送信"  style="top: 0px; left: 0px;">
                     </form>
                 </div>
-                <ul class="image-ul" style="position: relative; top: -400px;">
+                <ul class="image-ul" style="position: relative; top: -300px;">
                     <?php echo $string;?>
                 </ul>
             </div>
