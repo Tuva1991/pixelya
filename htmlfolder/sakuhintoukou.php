@@ -32,7 +32,7 @@ if(isset($_POST['name']))
             $sql = "INSERT INTO images(name) VALUES (:image)";
             $stmt = $dbh->prepare($sql);
             $stmt->bindValue(':image', $image, PDO::PARAM_STR); 
-                if(password == "49B507D1CCFE8BE6")
+                if($password == "49B507D1CCFE8BE6")
                 {
                     move_uploaded_file($file['label_image']['tmp_name'], "/images".$image_id);
                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
