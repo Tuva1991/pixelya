@@ -34,7 +34,7 @@ if(isset($_POST['name']))
             $stmt->bindValue(':image', $image, PDO::PARAM_STR); 
                 if($password == "49B507D1CCFE8BE6")
                 {
-                    move_uploaded_file($_FILES['label_image']['tmp_name'], $image_id);
+                    move_uploaded_file($_FILES['file']['tmp_name'], $image_id);
                     $br = "<br>";//特に深い意味はない　多分 " つけるのがめんどくさかったんだと思われる
                     $error = null;//おそらく深い意味はない　error 関連のバグが発生した時の試行錯誤策が今も残されている感じ
                     $link = 'file.txt';//リンク設定    
@@ -115,7 +115,7 @@ if(isset($_POST['name']))
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
                     <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
-                        <label for="label_image"><input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;" accept="image/png"></label>
+                        <input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;" accept="image/png">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
                         <input type="text" class="form-text" maxlength="30" name="name" style="top: 0px; left: 0px;">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">作品名（最大30文字）</p>
