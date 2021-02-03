@@ -14,17 +14,17 @@
     $image_name = htmlspecialchars($image_name, ENT_QUOTES, 'UTF-8');
     $discription = htmlspecialchars($discription, ENT_QUOTES, 'UTF-8');
     $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
-    if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
+    //if($name == "")//このnameとかに何も入っていないかの確認 正規表現使いたかったけれど時間ねえぇえええ 来年がんばる
+    //{
+    //    $error = "エラー：名前が入力されていません！<br>";
+    //}
+    //else
     {
-        $error = "エラー：名前が入力されていません！<br>";
-    }
-    else
-    {
-        if($file == null && $image_name == "" && $discription == "" && $password == "")
-        {
-            $error = $error."エラー：記入漏れがあります！<br>";
-        }
-        else
+        //if($file == null && $image_name == "" && $discription == "" && $password == "")
+        //{
+        //    $error = $error."エラー：記入漏れがあります！<br>";
+        //}
+        //else
         {
             //$info = pathinfo( $file, PATHINFO_EXTENSION);
             $image_id = uniqid().'png';//ファイル名をユニーク化
