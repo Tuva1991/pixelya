@@ -118,7 +118,7 @@
                 <div class="form" style="top: 0px; left: 0px; z-index: 100;"> <!--見ての通りformで送っています。 style="" でごちゃごちゃしているのは index.php でも使った styleを流用しているため、それの調整です。-->
                     <text class="form-title" style="top: 0px; left: 0px;"><br><br>ドット絵投稿機能<br></text>
                     <text class="form_subtitle"  style="top: 0px; left: 0px;">不適切なドット絵や作品名、投稿者名や、spam等は控えてください。<br><?php echo $error?><br></text>
-                    <form action = "https://lit-fortress-24137.herokuapp.com/htmlfolder/sakuhintoukou.php" method="post">
+                    <form>
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">ファイル選択</p>
                         <input type="file" class="form-file" name="file"  style="top: 0px; left: 0px;" accept="image/png">
                         <p class="form-description"  style="top: 0px; left: 0px;"  style="top: 0px; left: 0px;">投稿者名（最大30文字）</p>
