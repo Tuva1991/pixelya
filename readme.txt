@@ -11,3 +11,6 @@
 ・コメント機能
 index.php world-matome.html flag.html japan-flag.php etsuransuuosusume.php sakuhintoukou.php search.js style.css
 にコメントが書かれています。 
+最後の方時間がなくて実装できなかった機能がたくさんあったので、
+来年リベンジしたいです。
+ちなみにこのコードは大体 PHP 歴7日ぐらいで作りました。
