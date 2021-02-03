@@ -123,6 +123,7 @@ if(isset($_POST['name']))
                     </form>
                 </div>
                 <ul class="image-ul" style="position: relative;">
+                    <?php echo $string;?>
                 </ul>
             </div>
     </div>
