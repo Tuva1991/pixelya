@@ -174,17 +174,17 @@
                     </a>
                 </li>
             </ul><!-- コメント機能 -->
-            <div class="comment" style="top: 500px;">
-                <text class="comment-title">コメント機能<br></text>
-                <text class="comment-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
+            <div class="form">
+                <text class="form-title">コメント機能<br></text>
+                <text class="form-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
                 <form action = "index.php" method="post"> 
-                    <text class="name-description">名前（最大30文字）<br></text>
+                    <text class="form-description">名前（最大30文字）<br></text>
                     <input type="text" class="name-text" maxlength="30" name ="name">
-                    <text class="comment-description"><br>コメント（最大50文字）<br></text>
-                    <input type="text" class="comment-text" maxlength="50" name ="comment">
-                    <input type="submit" class="comment-button" value= "送信">
+                    <text class="form-description"><br>コメント（最大50文字）<br></text>
+                    <input type="text" class="form-text" maxlength="50" name ="comment">
+                    <input type="submit" class="form-button" value= "送信">
                 </form>
-                <text class="comment-list"><br><?php echo $string?></text>
+                <text class="form-list"><br><?php echo $string?></text>
             </div>
         </div>
         </div>
