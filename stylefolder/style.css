@@ -249,8 +249,8 @@ body
   background-color: white;
   image-rendering: pixelated;
 }
-.image-text
 /*そのまんま 日本国旗 って書いてあるのとかこれ*/
+.image-text
 {
   display: block;
   position: relative;
@@ -260,15 +260,15 @@ body
   text-align: center;
   height: 40px;
 }
-.imageanchor
 /*前にあったものの亜種(*/
+.imageanchor
 {
   display: inline-block;
   position: relative;
   width: 170px;
 }
-.imagebase
 /*<div>で仕切られたimage のbase*/
+.imagebase
 {
   top: 400px;
   display: table-cell;
@@ -286,8 +286,8 @@ body
   top: 400px;
   left: 10px;
 }
-.image-ul
 /*ここら辺は　index.php のコメント用の formや sakuhintoukou.php関連のもの*/
+.image-ul
 {
   position: relative;
   top: -300;
