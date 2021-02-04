@@ -179,7 +179,7 @@
                 <text class="form-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
                 <form action = "index.php" method="post"> 
                     <text class="form-description">名前（最大30文字）<br></text>
-                    <input type="text" class="name-text" maxlength="30" name ="name">
+                    <input type="text" class="form-text" maxlength="30" name ="name">
                     <text class="form-description"><br>コメント（最大50文字）<br></text>
                     <input type="text" class="form-text" maxlength="50" name ="comment">
                     <input type="submit" class="form-button" value= "送信">
