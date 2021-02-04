@@ -174,7 +174,7 @@
                     </a>
                 </li>
             </ul><!-- コメント機能 -->
-            <div　class="comment">
+            <div class="comment" style="top: 500px;">
                 <text class="comment-title">コメント機能<br></text>
                 <text class="comment-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
                 <form action = "index.php" method="post"> 
