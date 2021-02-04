@@ -173,8 +173,8 @@
                         </image>
                     </a>
                 </li>
-            </ul>
-            <div　class="comment"><!-- コメント機能 -->
+            </ul><!-- コメント機能 -->
+            <div　class="comment">
                 <text class="comment-title">コメント機能<br></text>
                 <text class="comment-subtitle">不適切なコメント、spam等は控えてください。<br><?php echo $error?></text>
                 <form action = "index.php" method="post"> 
